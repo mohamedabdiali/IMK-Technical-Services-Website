@@ -738,35 +738,41 @@
     display: grid;
     gap: 2rem;
     padding-left: 0;
-}
-
-.process-timeline::before {
-    content: '';
-    position: absolute;
-    left: 32px;
-    top: 0;
-    bottom: 0;
-    width: 2px;
-    background: var(--primary-orange);
+    --timeline-col: 64px;
 }
 
 .timeline-step {
     position: relative;
     display: grid;
-    grid-template-columns: 64px minmax(0, 1fr);
+    grid-template-columns: var(--timeline-col) minmax(0, 1fr);
     gap: 1.5rem;
     margin-bottom: 0;
+}
+
+.timeline-step::before {
+    content: '';
+    position: absolute;
+    left: calc(var(--timeline-col) / 2);
+    top: 0;
+    bottom: -2rem;
+    width: 2px;
+    background: var(--primary-orange);
+}
+
+.timeline-step:last-child::before {
+    bottom: 0;
 }
 
 .timeline-marker {
     position: relative;
     left: 0;
     top: 0;
-    width: 64px;
+    width: var(--timeline-col);
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 0.5rem;
+    z-index: 2;
 }
 
 .timeline-marker .icon-svg {
@@ -1954,17 +1960,12 @@
         gap: 2rem;
     }
 
-    .process-timeline::before {
-        left: 26px;
+    .process-timeline {
+        --timeline-col: 52px;
     }
 
     .timeline-step {
-        grid-template-columns: 52px minmax(0, 1fr);
         gap: 1rem;
-    }
-
-    .timeline-marker {
-        width: 52px;
     }
 
     .map-container {
@@ -2008,16 +2009,8 @@
         justify-self: start;
     }
 
-    .process-timeline::before {
-        left: 22px;
-    }
-
-    .timeline-step {
-        grid-template-columns: 44px minmax(0, 1fr);
-    }
-
-    .timeline-marker {
-        width: 44px;
+    .process-timeline {
+        --timeline-col: 44px;
     }
 
     .timeline-marker .icon-svg {
