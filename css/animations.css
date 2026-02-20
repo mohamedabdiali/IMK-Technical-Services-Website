@@ -599,8 +599,8 @@
 
 .phase-header {
     display: flex;
-    align-items: center;
-    gap: 1rem;
+    align-items: flex-start;
+    gap: 0.75rem;
     margin-bottom: 1rem;
 }
 
@@ -614,18 +614,21 @@
     align-items: center;
     justify-content: center;
     font-weight: 700;
+    flex: 0 0 auto;
 }
 
 .phase-header h3 {
     font-size: 1.3rem;
     margin: 0;
     color: var(--primary-dark);
+    line-height: 1.3;
 }
 
 .phase-header .phase-icon {
     width: 44px;
     height: 44px;
     margin: 0;
+    flex: 0 0 auto;
     flex-shrink: 0;
 }
 
@@ -726,13 +729,15 @@
 /* Process Timeline */
 .process-timeline {
     position: relative;
-    padding-left: 50px;
+    display: grid;
+    gap: 2rem;
+    padding-left: 0;
 }
 
 .process-timeline::before {
     content: '';
     position: absolute;
-    left: 20px;
+    left: 28px;
     top: 0;
     bottom: 0;
     width: 2px;
@@ -741,17 +746,17 @@
 
 .timeline-step {
     position: relative;
-    margin-bottom: 3rem;
+    display: grid;
+    grid-template-columns: 64px minmax(0, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 0;
 }
 
 .timeline-marker {
-    position: absolute;
-    left: -50px;
+    position: relative;
+    left: 0;
     top: 0;
-    width: 40px;
-    height: auto;
-    background: transparent;
-    border: none;
+    width: 64px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -759,13 +764,21 @@
 }
 
 .timeline-marker .icon-svg {
-    width: 28px;
-    height: 28px;
+    width: 26px;
+    height: 26px;
 }
 
 .marker-number {
     font-weight: 700;
     color: var(--primary-orange);
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: var(--primary-orange);
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .timeline-content {
@@ -1935,14 +1948,17 @@
         gap: 2rem;
     }
 
-    .process-timeline {
-        padding-left: 30px;
+    .process-timeline::before {
+        left: 22px;
+    }
+
+    .timeline-step {
+        grid-template-columns: 52px minmax(0, 1fr);
+        gap: 1rem;
     }
 
     .timeline-marker {
-        left: -30px;
-        width: 30px;
-        height: 30px;
+        width: 52px;
     }
 
     .map-container {
@@ -1984,6 +2000,23 @@
 
     .quality-step-icon {
         justify-self: start;
+    }
+
+    .process-timeline::before {
+        left: 18px;
+    }
+
+    .timeline-step {
+        grid-template-columns: 44px minmax(0, 1fr);
+    }
+
+    .timeline-marker {
+        width: 44px;
+    }
+
+    .timeline-marker .icon-svg {
+        width: 22px;
+        height: 22px;
     }
 
     .process-step::before {
