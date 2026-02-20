@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="IMK Technical Services - Professional Manpower & Technical Support Services in UAE">
+    <title>Our Services | IMK Technical Services LLC</title>
+
+    <!-- Security Headers -->
+    <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self'; script-src 'self' https://cdnjs.cloudflare.com; style-src 'self' https://cdnjs.cloudflare.com; img-src 'self' data: https:;">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Frame-Options" content="DENY">
+
+    <!-- Fonts & Icons -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Open+Sans:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- ===== HEADER ===== -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <a href="index.html" class="logo">
+                    <img src="images/logo.png" alt="IMK Logo" class="logo-img">
+                    <div class="logo-text">
+                        <span class="logo-main">IMK-TS</span>
+                        <span class="logo-sub">Technical Services L.L.C</span>
+                    </div>
+                </a>
+
+                <button class="menu-toggle" id="menuToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+                <ul class="nav-menu" id="navMenu">
+                    <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="about.html" class="nav-link">About Us</a></li>
+                    <li class="nav-item"><a href="services.html" class="nav-link active">Our Services</a></li>
+                    <li class="nav-item"><a href="how-we-work.html" class="nav-link">How We Work</a></li>
+                    <li class="nav-item"><a href="projects-partners.html" class="nav-link">Projects & Partners</a></li>
+                    <li class="nav-item"><a href="jobs-career.html" class="nav-link">Jobs & Career</a></li>
+                    <li class="nav-item"><a href="contact.html" class="nav-link">Contact Us</a></li>
+
+                    <li class="nav-item cta-nav">
+                        <a href="contact.html#request-form" class="btn btn-primary">
+                            <i class="bi bi-telephone"></i> +971 544 300 910
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- ===== PAGE HERO ===== -->
+    <section class="page-hero services-hero">
+        <div class="container">
+            <div class="page-hero-content" data-aos="fade-up">
+                <h1 class="page-title">Our Services</h1>
+                <p class="page-subtitle">Comprehensive technical services and manpower solutions for construction and
+                    infrastructure projects</p>
+                <nav class="breadcrumb">
+                    <a href="index.html">Home</a>
+                    <span class="separator">/</span>
+                    <span class="current">Our Services</span>
+                </nav>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SERVICE CATEGORIES ===== -->
+    <section class="section-padding" id="service-categories">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">Service Categories</h2>
+                <p class="section-subtitle">Tailored solutions for every project requirement</p>
+            </div>
+
+            <div class="service-categories-tabs">
+                <div class="tab-buttons">
+                    <button class="tab-btn active" data-tab="subcontracting">Subcontracting Services</button>
+                    <button class="tab-btn" data-tab="one-time">One-Time Deployment</button>
+                    <button class="tab-btn" data-tab="hr-payroll">HR & Payroll Management</button>
+                    <button class="tab-btn" data-tab="skilled">Skilled Manpower</button>
+                    <button class="tab-btn" data-tab="technical">Technical Support</button>
+                </div>
+
+                <div class="tab-content">
+                    <!-- Subcontracting Services -->
+                    <div class="tab-pane active" id="subcontracting">
+                        <div class="service-detail">
+                            <div class="service-info" data-aos="fade-right">
+                                <h3>Subcontracting Services (Project-Based)</h3>
+                                <p>IMK provides technical manpower and on-site supervision at subcontracting level to
+                                    support construction, fit-out, maintenance, and infrastructure projects.</p>
+
+                                <div class="service-features">
+                                    <h4>Scope Includes:</h4>
+                                    <ul>
+                                        <li><i class="bi bi-check-circle"></i> End-to-end subcontract manpower with full
+                                            supervision</li>
+                                        <li><i class="bi bi-check-circle"></i> Skilled and semi-skilled technical
+                                            manpower</li>
+                                        <li><i class="bi bi-check-circle"></i> Dedicated site supervisors and foremen
+                                        </li>
+                                        <li><i class="bi bi-check-circle"></i> MEP, civil, finishing, and maintenance
+                                            support</li>
+                                        <li><i class="bi bi-check-circle"></i> Project-based manpower deployment</li>
+                                    </ul>
+
+                                    <h4>Ideal For:</h4>
+                                    <ul>
+                                        <li><i class="bi bi-building"></i> Long-term project support</li>
+                                        <li><i class="bi bi-calendar-check"></i> Complete project lifecycle</li>
+                                        <li><i class="bi bi-people"></i> Full team requirements</li>
+                                        <li><i class="bi bi-clipboard-check"></i> Turnkey project execution</li>
+                                    </ul>
+                                </div>
+
+                                <a href="contact.html#request-form" class="btn btn-primary">
+                                    <i class="bi bi-calendar-plus"></i> Request Project Quote
+                                </a>
+                            </div>
+
+                            <div class="service-image" data-aos="fade-left">
+                                <img src="images/gallery/subcontracting-service.jpg" alt="Subcontracting Services">
+                                <div class="service-tag">
+                                    <i class="bi bi-award"></i> Most Popular Service
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- One-Time Deployment -->
+                    <div class="tab-pane" id="one-time">
+                        <div class="service-detail">
+                            <div class="service-info" data-aos="fade-right">
+                                <h3>One-Time Manpower Deployment</h3>
+                                <p>IMK supplies skilled or semi-skilled manpower on a one-time or short-term basis based
+                                    on client request. Deployed personnel work under the client's direct site
+                                    supervision.</p>
+
+                                <div class="service-features">
+                                    <h4>Services Include:</h4>
+                                    <ul>
+                                        <li><i class="bi bi-check-circle"></i> Fast, short-term workforce for urgent
+                                            project needs</li>
+                                        <li><i class="bi bi-check-circle"></i> On-demand labour for peak workload
+                                            support</li>
+                                        <li><i class="bi bi-check-circle"></i> Emergency manpower for unexpected
+                                            requirements</li>
+                                        <li><i class="bi bi-check-circle"></i> Skilled manpower deployed exactly when
+                                            you need it</li>
+                                    </ul>
+
+                                    <h4>Benefits:</h4>
+                                    <ul>
+                                        <li><i class="bi bi-lightning"></i> Rapid deployment (24-48 hours)</li>
+                                        <li><i class="bi bi-cash"></i> Cost-effective for short-term needs</li>
+                                        <li><i class="bi bi-clock"></i> Flexible duration (daily/weekly/monthly)</li>
+                                        <li><i class="bi bi-shield-check"></i> Fully compliant workforce</li>
+                                    </ul>
+                                </div>
+
+                                <a href="contact.html#request-form" class="btn btn-primary">
+                                    <i class="bi bi-person-plus"></i> Request Manpower Now
+                                </a>
+                            </div>
+
+                            <div class="service-image" data-aos="fade-left">
+                                <img src="images/gallery/one-time-deployment.jpg" alt="One-Time Deployment">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- HR & Payroll Management -->
+                    <div class="tab-pane" id="hr-payroll">
+                        <div class="service-detail">
+                            <div class="service-info" data-aos="fade-right">
+                                <h3>HR & Payroll Management (IMK-Sponsored Workforce)</h3>
+                                <p>IMK manages full HR and payroll services while staff remain under IMK sponsorship and
+                                    systems. Accommodation, transportation, payroll processing, and statutory compliance
+                                    are fully handled by IMK.</p>
+
+                                <div class="service-features">
+                                    <h4>Comprehensive Management Includes:</h4>
+                                    <ul>
+                                        <li><i class="bi bi-check-circle"></i> Employee sponsorship and visa management
+                                        </li>
+                                        <li><i class="bi bi-check-circle"></i> Payroll processing through WPS</li>
+                                        <li><i class="bi bi-check-circle"></i> Accommodation and transportation
+                                            management</li>
+                                        <li><i class="bi bi-check-circle"></i> Insurance and statutory compliance</li>
+                                        <li><i class="bi bi-check-circle"></i> HR administration and documentation</li>
+                                    </ul>
+
+                                    <h4>Your Benefits:</h4>
+                                    <ul>
+                                        <li><i class="bi bi-briefcase"></i> Focus on core business activities</li>
+                                        <li><i class="bi bi-shield"></i> Reduced compliance risks</li>
+                                        <li><i class="bi bi-graph-up"></i> Cost savings on HR infrastructure</li>
+                                        <li><i class="bi bi-headset"></i> Dedicated HR support team</li>
+                                    </ul>
+                                </div>
+
+                                <a href="contact.html#request-form" class="btn btn-primary">
+                                    <i class="bi bi-calculator"></i> Request HR Consultation
+                                </a>
+                            </div>
+
+                            <div class="service-image" data-aos="fade-left">
+                                <img src="images/gallery/hr-payroll.jpg" alt="HR & Payroll Management">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Skilled Manpower -->
+                    <div class="tab-pane" id="skilled">
+                        <div class="service-detail">
+                            <div class="service-info" data-aos="fade-right">
+                                <h3>Skilled & Semi-Skilled Manpower Supply</h3>
+                                <p>We supply skilled and semi-skilled technical manpower with full supervision, HSE
+                                    compliance, and flexible deployment to support your project delivery.</p>
+
+                                <div class="manpower-grid">
+                                    <div class="manpower-category">
+                                        <h4><i class="bi bi-tools"></i> Skilled Trades</h4>
+                                        <ul>
+                                            <li>Electricians</li>
+                                            <li>Plumbers</li>
+                                            <li>HVAC Technicians</li>
+                                            <li>Masonry Workers</li>
+                                            <li>Steel Fixers</li>
+                                            <li>Carpenters</li>
+                                            <li>Aluminium Installers</li>
+                                            <li>Painters</li>
+                                            <li>Tile Fixers</li>
+                                            <li>Welders</li>
+                                            <li>Duct Fabricators/Installers</li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="manpower-category">
+                                        <h4><i class="bi bi-person-badge"></i> Support Staff</h4>
+                                        <ul>
+                                            <li>MEP Helpers</li>
+                                            <li>Civil Helpers</li>
+                                            <li>General Helpers</li>
+                                            <li>General Labourers</li>
+                                            <li>Site Cleaners</li>
+                                            <li>Construction Helpers</li>
+                                            <li>Maintenance Helpers</li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="manpower-category">
+                                        <h4><i class="bi bi-clipboard-check"></i> Supervisory Staff</h4>
+                                        <ul>
+                                            <li>Site Supervisors</li>
+                                            <li>Foremen</li>
+                                            <li>Chargehands</li>
+                                            <li>Quality Inspectors</li>
+                                            <li>Safety Officers</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="service-image" data-aos="fade-left">
+                                <img src="images/gallery/skilled-manpower.jpg" alt="Skilled Manpower">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Technical Support -->
+                    <div class="tab-pane" id="technical">
+                        <div class="service-detail">
+                            <div class="service-info" data-aos="fade-right">
+                                <h3>Technical Support Services (Subcontract Level)</h3>
+                                <p>Specialized technical support services for complex project requirements with full
+                                    compliance and supervision.</p>
+
+                                <div class="service-features">
+                                    <h4>Technical Support Areas:</h4>
+                                    <ul>
+                                        <li><i class="bi bi-lightning"></i> MEP Installation Support</li>
+                                        <li><i class="bi bi-building"></i> Civil & Finishing Works Support</li>
+                                        <li><i class="bi bi-tools"></i> Building Maintenance Manpower</li>
+                                        <li><i class="bi bi-people"></i> Specialized Project-Based Manpower Teams</li>
+                                        <li><i class="bi bi-clipboard-data"></i> Technical Documentation Support</li>
+                                    </ul>
+
+                                    <h4>Specialized Teams Available:</h4>
+                                    <ul>
+                                        <li><i class="bi bi-gear"></i> Commissioning Teams</li>
+                                        <li><i class="bi bi-shield"></i> Testing & Commissioning Teams</li>
+                                        <li><i class="bi bi-building-check"></i> Snagging & Rectification Teams</li>
+                                        <li><i class="bi bi-truck"></i> Equipment Installation Teams</li>
+                                    </ul>
+                                </div>
+
+                                <a href="contact.html#request-form" class="btn btn-primary">
+                                    <i class="bi bi-headset"></i> Request Technical Support
+                                </a>
+                            </div>
+
+                            <div class="service-image" data-aos="fade-left">
+                                <img src="images/gallery/technical-support.jpg" alt="Technical Support">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SERVICE BENEFITS ===== -->
+    <section class="section-padding bg-light">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">Why Our Services Stand Out</h2>
+                <p class="section-subtitle">Comprehensive solutions with unmatched benefits</p>
+            </div>
+
+            <div class="benefits-grid">
+                <div class="benefit-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="benefit-icon">
+                        <i class="bi bi-shield-check"></i>
+                    </div>
+                    <h3>Full Compliance</h3>
+                    <p>100% compliance with UAE labour laws, WPS, visa regulations, and insurance requirements.</p>
+                </div>
+
+                <div class="benefit-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="benefit-icon">
+                        <i class="bi bi-clock-history"></i>
+                    </div>
+                    <h3>Rapid Deployment</h3>
+                    <p>Quick mobilization within 24-48 hours for urgent project requirements.</p>
+                </div>
+
+                <div class="benefit-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="benefit-icon">
+                        <i class="bi bi-currency-exchange"></i>
+                    </div>
+                    <h3>Cost-Effective</h3>
+                    <p>Flexible pricing models with no hidden costs or long-term commitments.</p>
+                </div>
+
+                <div class="benefit-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="benefit-icon">
+                        <i class="bi bi-person-check"></i>
+                    </div>
+                    <h3>Verified Workforce</h3>
+                    <p>All workers undergo background checks, skill verification, and safety training.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CALL TO ACTION ===== -->
+    <section class="cta-section section-padding">
+        <div class="container">
+            <div class="cta-content" data-aos="fade-up">
+                <h2 class="cta-title">Ready to Scale Your Project Workforce?</h2>
+                <p class="cta-description">Contact us today for a customized manpower solution tailored to your project
+                    requirements.</p>
+                <div class="cta-buttons">
+                    <a href="contact.html#request-form" class="btn btn-primary btn-lg">
+                        <i class="bi bi-calendar-check"></i> Request Service Quote
+                    </a>
+                    <a href="tel:+971544300910" class="btn btn-outline-light btn-lg">
+                        <i class="bi bi-telephone"></i> Call for Consultation
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+        <!-- Same footer as index.html -->
+    </footer>
+
+    <!-- ===== BACK TO TOP ===== -->
+    <button class="back-to-top" id="backToTop">
+        <i class="bi bi-chevron-up"></i>
+    </button>
+
+    <!-- ===== SCRIPTS ===== -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/services.js"></script>
+
+    <script>
+        AOS.init({
+                                        < li > <i class="bi bi-briefcase"></i> Focus on core business activities</li >
+                                        <li><i class="bi bi-shield"></i> Reduced compliance risks</li>
+                                        <li><i class="bi bi-graph-up"></i> Cost savings on HR infrastructure</li>
+                                        <li><i class="bi bi-headset"></i> Dedicated HR support team</li>
+                                    </ul >
+                                </div >
+
+            <a href="contact.html#request-form" class="btn btn-primary">
+                <i class="bi bi-calculator"></i> Request HR Consultation
+            </a>
+                            </div >
+
+            <div class="service-image" data-aos="fade-left">
+                <img src="images/gallery/hr-payroll.jpg" alt="HR & Payroll Management">
+            </div>
+                        </div >
+                    </div >
+
+                    <!-- Skilled Manpower -->
+                    <div class="tab-pane" id="skilled">
+                        <div class="service-detail">
+                            <div class="service-info" data-aos="fade-right">
+                                <h3>Skilled & Semi-Skilled Manpower Supply</h3>
+                                <p>We supply skilled and semi-skilled technical manpower with full supervision, HSE compliance, and flexible deployment to support your project delivery.</p>
+                                
+                                <div class="manpower-grid">
+                                    <div class="manpower-category">
+                                        <h4><i class="bi bi-tools"></i> Skilled Trades</h4>
+                                        <ul>
+                                            <li>Electricians</li>
+                                            <li>Plumbers</li>
+                                            <li>HVAC Technicians</li>
+                                            <li>Masonry Workers</li>
+                                            <li>Steel Fixers</li>
+                                            <li>Carpenters</li>
+                                            <li>Aluminium Installers</li>
+                                            <li>Painters</li>
+                                            <li>Tile Fixers</li>
+                                            <li>Welders</li>
+                                            <li>Duct Fabricators/Installers</li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <div class="manpower-category">
+                                        <h4><i class="bi bi-person-badge"></i> Support Staff</h4>
+                                        <ul>
+                                            <li>MEP Helpers</li>
+                                            <li>Civil Helpers</li>
+                                            <li>General Helpers</li>
+                                            <li>General Labourers</li>
+                                            <li>Site Cleaners</li>
+                                            <li>Construction Helpers</li>
+                                            <li>Maintenance Helpers</li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <div class="manpower-category">
+                                        <h4><i class="bi bi-clipboard-check"></i> Supervisory Staff</h4>
+                                        <ul>
+                                            <li>Site Supervisors</li>
+                                            <li>Foremen</li>
+                                            <li>Chargehands</li>
+                                            <li>Quality Inspectors</li>
+                                            <li>Safety Officers</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="service-image" data-aos="fade-left">
+                                <img src="images/gallery/skilled-manpower.jpg" alt="Skilled Manpower">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!--Technical Support-- >
+        <div class="tab-pane" id="technical">
+            <div class="service-detail">
+                <div class="service-info" data-aos="fade-right">
+                    <h3>Technical Support Services (Subcontract Level)</h3>
+                    <p>Specialized technical support services for complex project requirements with full compliance and supervision.</p>
+
+                    <div class="service-features">
+                        <h4>Technical Support Areas:</h4>
+                        <ul>
+                            <li><i class="bi bi-lightning"></i> MEP Installation Support</li>
+                            <li><i class="bi bi-building"></i> Civil & Finishing Works Support</li>
+                            <li><i class="bi bi-tools"></i> Building Maintenance Manpower</li>
+                            <li><i class="bi bi-people"></i> Specialized Project-Based Manpower Teams</li>
+                            <li><i class="bi bi-clipboard-data"></i> Technical Documentation Support</li>
+                        </ul>
+
+                        <h4>Specialized Teams Available:</h4>
+                        <ul>
+                            <li><i class="bi bi-gear"></i> Commissioning Teams</li>
+                            <li><i class="bi bi-shield"></i> Testing & Commissioning Teams</li>
+                            <li><i class="bi bi-building-check"></i> Snagging & Rectification Teams</li>
+                            <li><i class="bi bi-truck"></i> Equipment Installation Teams</li>
+                        </ul>
+                    </div>
+
+                    <a href="contact.html#request-form" class="btn btn-primary">
+                        <i class="bi bi-headset"></i> Request Technical Support
+                    </a>
+                </div>
+
+                <div class="service-image" data-aos="fade-left">
+                    <img src="images/gallery/technical-support.jpg" alt="Technical Support">
+                </div>
+            </div>
+        </div>
+                </div >
+            </div >
+        </div >
+    </section >
+
+    < !-- ===== SERVICE BENEFITS ===== -->
+    <section class="section-padding bg-light">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">Why Our Services Stand Out</h2>
+                <p class="section-subtitle">Comprehensive solutions with unmatched benefits</p>
+            </div>
+            
+            <div class="benefits-grid">
+                <div class="benefit-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="benefit-icon">
+                        <i class="bi bi-shield-check"></i>
+                    </div>
+                    <h3>Full Compliance</h3>
+                    <p>100% compliance with UAE labour laws, WPS, visa regulations, and insurance requirements.</p>
+                </div>
+                
+                <div class="benefit-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="benefit-icon">
+                        <i class="bi bi-clock-history"></i>
+                    </div>
+                    <h3>Rapid Deployment</h3>
+                    <p>Quick mobilization within 24-48 hours for urgent project requirements.</p>
+                </div>
+                
+                <div class="benefit-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="benefit-icon">
+                        <i class="bi bi-currency-exchange"></i>
+                    </div>
+                    <h3>Cost-Effective</h3>
+                    <p>Flexible pricing models with no hidden costs or long-term commitments.</p>
+                </div>
+                
+                <div class="benefit-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="benefit-icon">
+                        <i class="bi bi-person-check"></i>
+                    </div>
+                    <h3>Verified Workforce</h3>
+                    <p>All workers undergo background checks, skill verification, and safety training.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CALL TO ACTION ===== -->
+    <section class="cta-section section-padding">
+        <div class="container">
+            <div class="cta-content" data-aos="fade-up">
+                <h2 class="cta-title">Ready to Scale Your Project Workforce?</h2>
+                <p class="cta-description">Contact us today for a customized manpower solution tailored to your project requirements.</p>
+                <div class="cta-buttons">
+                    <a href="contact.html#request-form" class="btn btn-primary btn-lg">
+                        <i class="bi bi-calendar-check"></i> Request Service Quote
+                    </a>
+                    <a href="tel:+971544300910" class="btn btn-outline-light btn-lg">
+                        <i class="bi bi-telephone"></i> Call for Consultation
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+        <!-- Same footer as index.html -->
+    </footer>
+
+    <!-- ===== BACK TO TOP ===== -->
+    <button class="back-to-top" id="backToTop">
+        <i class="bi bi-chevron-up"></i>
+    </button>
+
+    <!-- ===== SCRIPTS ===== -->
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/services.js"></script>
+
+    <script>
+            AOS.init({
+                duration: 1000,
+            once: true,
+            offset: 100
+        });
+
+            // Service tabs functionality
+            document.addEventListener('DOMContentLoaded', function() {
+            const tabBtns = document.querySelectorAll('.tab-btn');
+            const tabPanes = document.querySelectorAll('.tab-pane');
+
+            // Function to activate a tab
+            function activateTab(tabId) {
+                // Remove active class from all buttons and panes
+                tabBtns.forEach(b => b.classList.remove('active'));
+                tabPanes.forEach(p => p.classList.remove('active'));
+
+            // Add active class to corresponding button and pane
+            const targetBtn = document.querySelector(`[data-tab="${tabId}"]`);
+            const targetPane = document.getElementById(tabId);
+
+            if (targetBtn && targetPane) {
+                targetBtn.classList.add('active');
+            targetPane.classList.add('active');
+
+                    // Scroll to the section
+                    setTimeout(() => {
+                targetPane.scrollIntoIntoView({ behavior: 'smooth', block: 'start' });
+                    }, 100);
+                }
+            }
+
+            // Handle tab button clicks
+            tabBtns.forEach(btn => {
+                btn.addEventListener('click', function () {
+                    const tabId = this.getAttribute('data-tab');
+                    activateTab(tabId);
+
+                    // Update URL hash without scrolling
+                    history.pushState(null, null, `#${tabId}`);
+                });
+            });
+
+            // Handle URL hash on page load
+            const hash = window.location.hash.substring(1); // Remove the # symbol
+            if (hash && document.getElementById(hash)) {
+                activateTab(hash);
+            } else if (tabBtns.length > 0) {
+                // If no hash, activate the first tab by default
+                activateTab(tabBtns[0].getAttribute('data-tab'));
+            }
+
+            // Handle browser back/forward buttons
+            window.addEventListener('hashchange', function() {
+                const hash = window.location.hash.substring(1);
+            if (hash && document.getElementById(hash)) {
+                activateTab(hash);
+                } else if (tabBtns.length > 0) {
+                // If hash is cleared or invalid, activate the first tab
+                activateTab(tabBtns[0].getAttribute('data-tab'));
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

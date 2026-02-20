@@ -1,0 +1,38 @@
+# IMK Technical Services Website
+
+## Project Overview
+
+A professional, responsive, and secure website for IMK Technical Services LLC, a Dubai-based technical services and manpower supply company.
+
+## Features
+
+### 🎨 Design Features
+- Modern, professional design with IMK brand colors
+- Responsive design for all devices (mobile, tablet, desktop)
+- 3 video slides + 3 image slides hero section
+- Smooth animations and transitions
+- Clean, professional typography
+
+### 🛠 Technical Features
+- **Security**: CSP headers, XSS protection, input sanitization
+- **Performance**: Lazy loading, optimized images, minified assets
+- **Accessibility**: ARIA labels, semantic HTML, keyboard navigation
+- **SEO Optimized**: Meta tags, structured data, XML sitemap
+- **Cross-browser Compatible**: Works on all modern browsers
+
+### 📱 Pages Included
+1. **Home** - Hero slider, features, services overview, statistics
+2. **About Us** - Company overview, mission/vision, core values, team
+3. **Our Services** - Detailed service descriptions and offerings
+4. **How We Work** - Business model, processes, compliance
+5. **Projects & Partners** - Project portfolio and partner showcase
+6. **Jobs & Career** - Job listings with admin management system
+7. **Contact Us** - Contact form, location map, request forms
+
+### 🔧 Admin Features
+- Job posting management
+- Application tracking system
+- Content management capabilities
+- Secure admin dashboard
+
+## File Structure

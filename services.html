@@ -1,0 +1,697 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="IMK Technical Services LLC - Reliable Technical Services & Skilled Manpower Solutions in UAE">
+    <meta name="keywords" content="construction, manpower, UAE, technical services, skilled workers">
+    <meta name="author" content="IMK Technical Services">
+
+    <!-- Security Headers -->
+    <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://unpkg.com https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://unpkg.com https://fonts.googleapis.com https://cdn.jsdelivr.net; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com data:; img-src 'self' data: https:;">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Frame-Options" content="DENY">
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block">
+
+    <title>Our Services | IMK Technical Services LLC</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="Images/IMK-TS logo3.png">
+
+    <!-- Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Open+Sans:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- ===== HEADER & NAVIGATION ===== -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <!-- Logo -->
+                <a href="index.html" class="logo">
+                    <img src="Images/IMK-TS logo3.png" alt="IMK Technical Services Logo" class="logo-img">
+                </a>
+
+                <!-- Mobile Menu Toggle -->
+                <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+                <!-- Main Navigation -->
+                <ul class="nav-menu" id="navMenu">
+                    <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="about.html" class="nav-link">About Us</a></li>
+                    <li class="nav-item"><a href="services.html" class="nav-link active">Our Services</a></li>
+                    <li class="nav-item"><a href="how-we-work.html" class="nav-link">How We Work</a></li>
+                    <li class="nav-item"><a href="projects-partners.html" class="nav-link">Projects & Partners</a></li>
+                    <li class="nav-item"><a href="jobs-career.html" class="nav-link">Jobs & Career</a></li>
+                    <li class="nav-item"><a href="contact.html" class="nav-link">Contact Us</a></li>
+
+                    <!-- Call to Action Button -->
+                    <li class="nav-item cta-nav">
+                        <a href="contact.html#request-form" class="btn btn-primary">
+                            <img src="icons/telephone.svg" class="icon-svg icon-inline" alt="phone"> +971 544 300 910
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- ===== HERO SECTION WITH SLIDER ===== -->
+    <section class="hero-section sub-page-hero">
+        <div class="hero-slider" id="heroSlider">
+            <!-- Subcontracting Services Slide -->
+            <div class="slide active" data-type="image">
+                <img src="Images/slide2.jpg" alt="Subcontracting Services" class="hero-image">
+                <div class="slide-overlay"></div>
+                <div class="slide-content">
+                    <h1 class="slide-title">Subcontracting Services</h1>
+                    <p class="slide-description">End-to-end subcontract manpower with full supervision for construction,
+                        fit-out, and maintenance projects.</p>
+                    <nav class="breadcrumb hero-breadcrumb" style="margin-bottom: 20px;">
+                        <a href="index.html"><img src="icons/house-door.svg" class="icon-svg" alt="home"> Home</a>
+                        <span class="separator">/</span>
+                        <span class="current">Our Services</span>
+                    </nav>
+                    <div class="slide-buttons">
+                        <a href="#subcontracting" class="btn btn-primary btn-lg">Learn More</a>
+                        <a href="contact.html" class="btn btn-outline btn-lg">Request Service</a>
+                        <a href="#" class="btn-whatsapp" data-whatsapp-number="971544300910">
+                            <img src="icons/whatsapp.svg" alt="WhatsApp"> Chat on WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- One-Time Deployment Slide -->
+            <div class="slide" data-type="image">
+                <img src="Images/slide3.jpg" alt="One-Time Deployment" class="hero-image">
+                <div class="slide-overlay"></div>
+                <div class="slide-content">
+                    <h1 class="slide-title">One-Time Manpower Deployment</h1>
+                    <p class="slide-description">Fast, short-term workforce solutions deployed exactly when you need it
+                        for urgent project requirements.</p>
+                    <nav class="breadcrumb hero-breadcrumb" style="margin-bottom: 20px;">
+                        <a href="index.html"><img src="icons/house-door.svg" class="icon-svg" alt="home"> Home</a>
+                        <span class="separator">/</span>
+                        <span class="current">Our Services</span>
+                    </nav>
+                    <div class="slide-buttons">
+                        <a href="#one-time" class="btn btn-primary btn-lg">Learn More</a>
+                        <a href="contact.html" class="btn btn-outline btn-lg">Request Now</a>
+                        <a href="#" class="btn-whatsapp" data-whatsapp-number="971544300910">
+                            <img src="icons/whatsapp.svg" alt="WhatsApp"> Chat on WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- HR & Payroll Management Slide -->
+            <div class="slide" data-type="image">
+                <img src="Images/team.jpeg" alt="HR & Payroll Management" class="hero-image">
+                <div class="slide-overlay"></div>
+                <div class="slide-content">
+                    <h1 class="slide-title">HR & Payroll Management</h1>
+                    <p class="slide-description">Full HR and payroll services while staff remain under IMK sponsorship
+                        with accommodation and transportation.</p>
+                    <nav class="breadcrumb hero-breadcrumb" style="margin-bottom: 20px;">
+                        <a href="index.html"><img src="icons/house-door.svg" class="icon-svg" alt="home"> Home</a>
+                        <span class="separator">/</span>
+                        <span class="current">Our Services</span>
+                    </nav>
+                    <div class="slide-buttons">
+                        <a href="#hr-payroll" class="btn btn-primary btn-lg">Learn More</a>
+                        <a href="contact.html" class="btn btn-outline btn-lg">Get Consultation</a>
+                        <a href="#" class="btn-whatsapp" data-whatsapp-number="971544300910">
+                            <img src="icons/whatsapp.svg" alt="WhatsApp"> Chat on WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Skilled Manpower Slide -->
+            <div class="slide" data-type="image">
+                <img src="Images/slide2.jpg" alt="Skilled Manpower" class="hero-image">
+                <div class="slide-overlay"></div>
+                <div class="slide-content">
+                    <h1 class="slide-title">Skilled & Semi-Skilled Manpower</h1>
+                    <p class="slide-description">Electricians, Plumbers, HVAC Technicians, Masons, Steel Fixers,
+                        Carpenters and more with full supervision.</p>
+                    <nav class="breadcrumb hero-breadcrumb" style="margin-bottom: 20px;">
+                        <a href="index.html"><img src="icons/house-door.svg" class="icon-svg" alt="home"> Home</a>
+                        <span class="separator">/</span>
+                        <span class="current">Our Services</span>
+                    </nav>
+                    <div class="slide-buttons">
+                        <a href="#skilled" class="btn btn-primary btn-lg">Learn More</a>
+                        <a href="contact.html" class="btn btn-outline btn-lg">Request Manpower</a>
+                        <a href="#" class="btn-whatsapp" data-whatsapp-number="971544300910">
+                            <img src="icons/whatsapp.svg" alt="WhatsApp"> Chat on WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Technical Support Slide -->
+            <div class="slide" data-type="image">
+                <img src="Images/slide3.jpg" alt="Technical Support Services" class="hero-image">
+                <div class="slide-overlay"></div>
+                <div class="slide-content">
+                    <h1 class="slide-title">Technical Support Services</h1>
+                    <p class="slide-description">Equipment operation, maintenance, troubleshooting, and on-site
+                        technical assistance for your projects.</p>
+                    <nav class="breadcrumb hero-breadcrumb" style="margin-bottom: 20px;">
+                        <a href="index.html"><img src="icons/house-door.svg" class="icon-svg" alt="home"> Home</a>
+                        <span class="separator">/</span>
+                        <span class="current">Our Services</span>
+                    </nav>
+                    <div class="slide-buttons">
+                        <a href="#technical" class="btn btn-primary btn-lg">Learn More</a>
+                        <a href="contact.html" class="btn btn-outline btn-lg">Get Support</a>
+                        <a href="#" class="btn-whatsapp" data-whatsapp-number="971544300910">
+                            <img src="icons/whatsapp.svg" alt="WhatsApp"> Chat on WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slider Controls -->
+        <button class="slider-control prev" id="prevSlide" aria-label="Previous slide">
+            <img src="icons/chevron-left.svg" class="icon-svg" alt="prev">
+        </button>
+        <button class="slider-control next" id="nextSlide" aria-label="Next slide">
+            <img src="icons/chevron-right.svg" class="icon-svg" alt="next">
+        </button>
+
+        <!-- Slider Indicators -->
+        <div class="slider-indicators" id="sliderIndicators">
+            <!-- Indicators will be generated by JavaScript -->
+        </div>
+    </section>
+
+    <!-- ===== SERVICE CATEGORIES ===== -->
+    <section class="section-padding" id="service-categories">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title"> Our Service Offerings</h2>
+                <p class="section-subtitle">Comprehensive technical services and manpower solutions for construction and
+                    infrastructure projects</p>
+            </div>
+
+            <!-- Subcontracting Services -->
+            <div class="service-detail" id="subcontracting" data-aos="fade-up">
+                <div class="service-info">
+                    <h3>
+                        <img src="icons/building.svg" class="icon-svg icon-inline" alt="subcontracting"> Subcontracting
+                        Services (Project-Based)
+                    </h3>
+                    <p>IMK provides technical manpower and on-site supervision at subcontracting level to support
+                        construction, fit-out, maintenance, and infrastructure projects.</p>
+
+                    <div class="service-features">
+                        <h4>Scope Includes:</h4>
+                        <ul>
+                            <li><img src="icons/check-circle.svg" class="icon-svg icon-inline" alt="check"> End-to-end
+                                subcontract
+                                manpower with full supervision
+                            </li>
+                            <li><img src="icons/check-circle.svg" class="icon-svg icon-inline" alt="check"> Skilled and
+                                semi-skilled
+                                technical manpower</li>
+                            <li><img src="icons/check-circle.svg" class="icon-svg icon-inline" alt="check"> Dedicated
+                                site
+                                supervisors and foremen</li>
+                            <li>
+                                Project-specific HSE
+                                plans and safety training</li>
+                            <li><img src="icons/check-circle.svg" class="icon-svg icon-inline" alt="check"> Quality
+                                inspections and
+                                performance monitoring</li>
+                        </ul>
+
+                        <h4>Benefits:</h4>
+                        <ul>
+                            <li><img src="icons/shield-check.svg" class="icon-svg icon-inline" alt="compliance"> Full
+                                compliance
+                                with MOHRE and WPS</li>
+                            <li><img src="icons/people.svg" class="icon-svg icon-inline" alt="workforce"> Reliable,
+                                scalable
+                                workforce</li>
+                            <li><img src="icons/clipboard2-check.svg" class="icon-svg icon-inline" alt="HSE"> Strong HSE
+                                & quality
+                                culture</li>
+                            <li><img src="icons/chat-dots.svg" class="icon-svg icon-inline" alt="communication"> Single
+                                point of
+                                contact for coordination</li>
+                        </ul>
+                    </div>
+
+                    <a href="contact.html#request-form" class="btn btn-primary">
+                        <img src="icons/send.svg" class="icon-svg icon-inline" alt="send"> Request Service
+                    </a>
+                </div>
+
+                <div class="service-image">
+                    <img src="Images/slide2.jpg" alt="Subcontracting Services">
+                </div>
+            </div>
+
+            <!-- One-Time Deployment -->
+            <div class="service-detail" id="one-time" data-aos="fade-up">
+                <div class="service-image">
+                    <img src="Images/slide3.jpg" alt="One-Time Deployment">
+                </div>
+
+                <div class="service-info">
+                    <h3 class="has-icon"><img src="icons/person-badge.svg" class="icon-svg icon-inline"
+                            alt="deployment"> One-Time Manpower
+                        Deployment</h3>
+                    <p>IMK supplies skilled or semi-skilled manpower on a one-time or short-term basis based on client
+                        request. Deployed personnel work under the client's direct site supervision.</p>
+
+                    <div class="service-features">
+                        <h4>Services Include:</h4>
+                        <ul>
+                            <li><img src="icons/check-circle.svg" class="icon-svg icon-inline" alt="check"> Fast,
+                                short-term
+                                workforce for urgent project needs
+                            </li>
+                            <li><img src="icons/check-circle.svg" class="icon-svg icon-inline" alt="check"> On-demand
+                                labour for
+                                peak workload support</li>
+                            <li><img src="icons/check-circle.svg" class="icon-svg icon-inline" alt="check"> Emergency
+                                manpower for
+                                unexpected requirements</li>
+                            <li><img src="icons/check-circle.svg" class="icon-svg icon-inline" alt="check"> Skilled
+                                manpower
+                                deployed exactly when you need it
+                            </li>
+                        </ul>
+
+                        <h4>Why Choose This Service:</h4>
+                        <ul>
+                            <li><img src="icons/lightning.svg" class="icon-svg icon-inline" alt="rapid"> Rapid
+                                deployment (24-48
+                                hours)</li>
+                            <li><img src="icons/cash.svg" class="icon-svg icon-inline" alt="cost"> Cost-effective for
+                                short-term
+                                needs</li>
+                            <li><img src="icons/clock.svg" class="icon-svg icon-inline" alt="flexible"> Flexible
+                                duration
+                                (daily/weekly/monthly)</li>
+                            <li><img src="icons/shield-check.svg" class="icon-svg icon-inline" alt="shield"> Fully
+                                compliant
+                                workforce</li>
+                        </ul>
+                    </div>
+
+                    <a href="contact.html#request-form" class="btn btn-primary">
+                        <img src="icons/person-plus.svg" class="icon-svg icon-inline" alt="request"> Request Now
+                    </a>
+                </div>
+            </div>
+
+            <!-- HR & Payroll Management -->
+            <div class="service-detail" id="hr-payroll" data-aos="fade-up">
+                <div class="service-info">
+                    <h3 class="has-icon"><img src="icons/calculator.svg" class="icon-svg icon-inline" alt="HR"> HR &
+                        Payroll Management
+                        (IMK-Sponsored Workforce)</h3>
+                    <p>IMK manages full HR and payroll services while staff remain under IMK sponsorship and systems.
+                        Accommodation, transportation, payroll processing, and statutory compliance are fully handled by
+                        IMK.</p>
+
+                    <div class="service-features">
+                        <h4>Comprehensive Management Includes:</h4>
+                        <ul>
+                            <li><img src="icons/check-circle.svg" class="icon-svg icon-inline" alt="check"> Employee
+                                sponsorship and
+                                visa management</li>
+                            <li><img src="icons/check-circle.svg" class="icon-svg icon-inline" alt="check"> Payroll
+                                processing
+                                through WPS</li>
+                            <li>
+                                Accommodation and
+                                transportation management</li>
+                            <li><img src="icons/check-circle.svg" class="icon-svg icon-inline" alt="check"> Insurance
+                                and statutory
+                                compliance</li>
+                            <li><img src="icons/check-circle.svg" class="icon-svg icon-inline" alt="check"> HR
+                                administration and
+                                documentation</li>
+                        </ul>
+
+                        <h4>Your Benefits:</h4>
+                        <ul>
+                            <li><img src="icons/briefcase.svg" class="icon-svg icon-inline" alt="focus"> Focus on core
+                                business
+                                activities</li>
+                            <li><img src="icons/shield.svg" class="icon-svg icon-inline" alt="compliance"> Reduced
+                                compliance risks
+                            </li>
+                            <li><img src="icons/graph-up.svg" class="icon-svg icon-inline" alt="savings"> Cost savings
+                                on HR
+                                infrastructure</li>
+                            <li><img src="icons/headset.svg" class="icon-svg icon-inline" alt="support"> Dedicated HR
+                                support team
+                            </li>
+                        </ul>
+                    </div>
+
+                    <a href="contact.html#request-form" class="btn btn-primary">
+                        <img src="icons/calculator.svg" class="icon-svg icon-inline" alt="calc"> Get Consultation
+                    </a>
+                </div>
+
+                <div class="service-image">
+                    <img src="Images/team.jpeg" alt="HR & Payroll Management">
+                </div>
+            </div>
+
+            <!-- Skilled Manpower -->
+            <div class="service-detail" id="skilled" data-aos="fade-up">
+                <div class="service-image">
+                    <img src="Images/slide2.jpg" alt="Skilled Manpower">
+                </div>
+
+                <div class="service-info">
+                    <h3 class="has-icon"><img src="icons/people.svg" class="icon-svg icon-inline" alt="manpower">
+                        Skilled & Semi-Skilled Manpower
+                        Supply</h3>
+                    <p>We supply skilled and semi-skilled technical manpower with full supervision, HSE compliance, and
+                        flexible deployment to support your project delivery.</p>
+
+                    <div class="manpower-grid">
+                        <div class="manpower-category">
+                            <h4 class="has-icon"><img src="icons/tools.svg" class="icon-svg icon-inline" alt="trades">
+                                Skilled Trades</h4>
+                            <ul>
+                                <li>Electricians</li>
+                                <li>Plumbers</li>
+                                <li>HVAC Technicians</li>
+                                <li>Masonry Workers</li>
+                                <li>Steel Fixers</li>
+                                <li>Carpenters</li>
+                            </ul>
+                        </div>
+
+                        <div class="manpower-category">
+                            <h4 class="has-icon"><img src="icons/person-badge.svg" class="icon-svg icon-inline"
+                                    alt="semi-skilled"> Semi-Skilled</h4>
+                            <ul>
+                                <li>Helpers & Laborers</li>
+                                <li>Forklift Operators</li>
+                                <li>Scaffolding Erectors</li>
+                                <li>Material Handlers</li>
+                                <li>Site Cleaners</li>
+                                <li>General Workers</li>
+                            </ul>
+                        </div>
+
+                        <div class="manpower-category">
+                            <h4 class="has-icon"><img src="icons/building.svg" class="icon-svg icon-inline"
+                                    alt="supervisory"> Supervisory</h4>
+                            <ul>
+                                <li>Site Supervisors</li>
+                                <li>Foremen</li>
+                                <li>HSE Officers</li>
+                                <li>Quality Inspectors</li>
+                                <li>Project Coordinators</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <a href="contact.html#request-form" class="btn btn-primary">
+                        <img src="icons/person-check.svg" class="icon-svg icon-inline" alt="request"> Request Manpower
+                    </a>
+                </div>
+            </div>
+
+            <!-- Technical Support Services -->
+            <div class="service-detail" id="technical" data-aos="fade-up">
+                <div class="service-info">
+                    <h3 class="has-icon"><img src="icons/wrench-adjustable-circle.svg" class="icon-svg icon-inline"
+                            alt="support"> Technical Support
+                        Services</h3>
+                    <p>Specialized technical support services including equipment operation, maintenance,
+                        troubleshooting, and on-site technical assistance for construction and industrial projects.</p>
+
+                    <div class="service-features">
+                        <h4>Services Include:</h4>
+                        <ul>
+                            <li><img src="icons/check-circle.svg" class="icon-svg icon-inline" alt="check"> Equipment
+                                operation and
+                                maintenance</li>
+                            <li><img src="icons/check-circle.svg" class="icon-svg icon-inline" alt="check"> On-site
+                                technical
+                                troubleshooting</li>
+                            <li><img src="icons/check-circle.svg" class="icon-svg icon-inline" alt="check"> Safety
+                                system inspection
+                                and compliance</li>
+                            <li><img src="icons/check-circle.svg" class="icon-svg icon-inline" alt="check"> Maintenance
+                                and
+                                preventive care</li>
+                            <li><img src="icons/check-circle.svg" class="icon-svg icon-inline" alt="check"> Emergency
+                                technical
+                                support</li>
+                        </ul>
+
+                        <h4>Technical Expertise:</h4>
+                        <ul>
+                            <li><img src="icons/wrench.svg" class="icon-svg icon-inline" alt="electrical"> Electrical
+                                systems &
+                                troubleshooting</li>
+                            <li><img src="icons/tools.svg" class="icon-svg icon-inline" alt="mechanical"> Mechanical &
+                                equipment
+                                maintenance</li>
+                            <li><img src="icons/house-heart.svg" class="icon-svg icon-inline" alt="hvac"> HVAC system
+                                support</li>
+                            <li><img src="icons/shield-check.svg" class="icon-svg icon-inline" alt="shield"> Safety
+                                systems
+                                verification</li>
+                        </ul>
+                    </div>
+
+                    <a href="contact.html#request-form" class="btn btn-primary">
+                        <img src="icons/telephone.svg" class="icon-svg icon-inline" alt="phone"> Get Support
+                    </a>
+                </div>
+
+                <div class="service-image">
+                    <img src="Images/slide3.jpg" alt="Technical Support">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SERVICE BENEFITS ===== -->
+    <section class="section-padding bg-light">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">Why Choose IMK Services</h2>
+                <p class="section-subtitle">Excellence, compliance, and reliability in every service</p>
+            </div>
+
+            <div class="benefits-grid">
+                <div class="benefit-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="feature-icon">
+                        <img src="icons/shield-check.svg" class="icon-svg" alt="compliance">
+                    </div>
+                    <h3>100% Compliance</h3>
+                    <p>Full MOHRE, WPS, visa, and insurance compliance for peace of mind</p>
+                </div>
+
+                <div class="benefit-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="feature-icon">
+                        <img src="icons/people.svg" class="icon-svg" alt="scalable">
+                    </div>
+                    <h3>Scalable Workforce</h3>
+                    <p>Flexible manpower scaling from 1 to 500+ workers based on project needs</p>
+                </div>
+
+                <div class="benefit-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="feature-icon">
+                        <img src="icons/briefcase.svg" class="icon-svg" alt="management">
+                    </div>
+                    <h3>Professional Management</h3>
+                    <p>Dedicated supervisors and HSE officers ensuring quality and safety</p>
+                </div>
+
+                <div class="benefit-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="icon-box is-circle box-light icon-top">
+                        <img src="icons/clock.svg" class="icon-svg" alt="support">
+                    </div>
+                    <h3>24/7 Support</h3>
+                    <p>Round-the-clock customer support and emergency manpower deployment</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CALL TO ACTION ===== -->
+    <section class="cta-section section-padding">
+        <div class="container">
+            <div class="cta-content" data-aos="fade-up">
+                <h2 class="cta-title">Ready to Scale Your Workforce?</h2>
+                <p class="cta-description">Contact us today to discuss your project manpower requirements and get a
+                    customized solution.</p>
+                <div class="cta-buttons">
+                    <a href="contact.html#request-form" class="btn btn-primary btn-lg">
+                        <img src="icons/send.svg" class="icon-svg icon-inline" alt="send"> Request Service
+                    </a>
+                    <a href="contact.html" class="btn btn-outline-light btn-lg">
+                        <img src="icons/telephone.svg" class="icon-svg icon-inline" alt="phone"> Call Now
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <!-- Company Info -->
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <img src="Images/IMK-BrandsLogo.png" alt="IMK Logo">
+                        <div class="footer-logo-text">
+                            <h3>IMK Technical Services</h3>
+                            <p>L.L.C</p>
+                        </div>
+                    </div>
+                    <div class="footer-about">
+                        <p>
+                            A UAE-licensed technical services and manpower supply company providing compliant,
+                            safety-trained, and supervised workforce to construction and infrastructure projects.
+                        </p>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://facebook.com" target="_blank" class="social-link" aria-label="Facebook"><img
+                                src="icons/facebook.svg" class="icon-svg" alt="facebook"></a>
+                        <a href="https://linkedin.com" target="_blank" class="social-link" aria-label="LinkedIn"><img
+                                src="icons/linkedin.svg" class="icon-svg" alt="linkedin"></a>
+                        <a href="https://twitter.com" target="_blank" class="social-link" aria-label="Twitter"><img
+                                src="icons/twitter.svg" class="icon-svg" alt="twitter"></a>
+                        <a href="https://instagram.com" target="_blank" class="social-link" aria-label="Instagram"><img
+                                src="icons/instagram.svg" class="icon-svg" alt="instagram"></a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Our Services</a></li>
+                        <li><a href="how-we-work.html">How We Work</a></li>
+                        <li><a href="projects-partners.html">Projects & Partners</a></li>
+                        <li><a href="jobs-career.html">Jobs & Career</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Services -->
+                <div class="footer-col">
+                    <h3>Our Services</h3>
+                    <ul class="footer-links">
+                        <li><a href="services.html#subcontracting">Subcontracting Services</a></li>
+                        <li><a href="services.html#one-time">One-Time Deployment</a></li>
+                        <li><a href="services.html#hr-payroll">HR & Payroll Management</a></li>
+                        <li><a href="services.html#skilled">Skilled Manpower Supply</a></li>
+                        <li><a href="services.html#technical">Technical Support Services</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="footer-col">
+                    <h3>Contact Us</h3>
+                    <div class="contact-info-item">
+                        <img src="icons/geo-alt.svg" class="icon-svg" alt="location">
+                        <p>Office No: 204, Mohammed Khaliq Alrehman Alansari Building, Naif Intersection, Dubai, UAE</p>
+                    </div>
+                    <div class="contact-info-item">
+                        <img src="icons/telephone.svg" class="icon-svg" alt="phone">
+                        <p>+971 544 300 910</p>
+                    </div>
+                    <div class="contact-info-item">
+                        <img src="icons/envelope.svg" class="icon-svg" alt="email">
+                        <p>info@imkservices.ae</p>
+                    </div>
+                    <div class="contact-info-item">
+                        <img src="icons/clock.svg" class="icon-svg" alt="hours">
+                        <p>Mon - Sat: 10:00 AM - 07:00 PM</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="footer-bottom-content">
+                    <p>&copy; 2026 IMK Technical Services LLC. All Rights Reserved.</p>
+                    <div class="footer-bottom-links">
+                        <a href="privacy.html">Privacy Policy</a>
+                        <a href="terms.html">Terms of Service</a>
+                        <a href="cookies.html">Cookie Policy</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ===== BACK TO TOP BUTTON ===== -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <img src="icons/chevron-up.svg" class="icon-svg icon-inline" style="margin-right:0;" alt="top">
+    </button>
+
+    <!-- ===== SCRIPTS ===== -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/main.js?v=20260213d"></script>
+    <script src="js/whatsapp-widget.js?v=20260213a"></script>
+    <script src="js/carousel.js"></script>
+
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100
+        });
+
+        // Initialize hero carousel and stats counter
+        document.addEventListener('DOMContentLoaded', function () {
+            if (typeof initHeroSlider === 'function') {
+                initHeroSlider();
+            }
+            if (typeof initStatsCounter === 'function') {
+                initStatsCounter();
+            }
+        });
+    </script>
+</body>
+
+</html>
+
+

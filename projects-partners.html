@@ -1,0 +1,664 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="IMK Technical Services - Our Projects & Industry Partners in UAE">
+    <title>Projects & Partners | IMK Technical Services LLC</title>
+
+    <!-- Security Headers -->
+    <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://unpkg.com https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://unpkg.com https://fonts.googleapis.com https://cdn.jsdelivr.net; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com data:; img-src 'self' data: https:;">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+
+    <!-- Fonts & Icons -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Open+Sans:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- ===== HEADER ===== -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <a href="index.html" class="logo">
+                    <img src="Images/IMK-TS logo3.png" alt="IMK Technical Services Logo" class="logo-img">
+                </a>
+
+                <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+                <ul class="nav-menu" id="navMenu">
+                    <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="about.html" class="nav-link">About Us</a></li>
+                    <li class="nav-item"><a href="services.html" class="nav-link">Our Services</a></li>
+                    <li class="nav-item"><a href="how-we-work.html" class="nav-link">How We Work</a></li>
+                    <li class="nav-item"><a href="projects-partners.html" class="nav-link active">Projects &
+                            Partners</a></li>
+                    <li class="nav-item"><a href="jobs-career.html" class="nav-link">Jobs & Career</a></li>
+                    <li class="nav-item"><a href="contact.html" class="nav-link">Contact Us</a></li>
+
+                    <li class="nav-item cta-nav">
+                        <a href="contact.html#request-form" class="btn btn-primary">
+                            <img src="icons/telephone.svg" class="icon-svg icon-inline" alt="phone"> +971 544 300 910
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- ===== PAGE HERO ===== -->
+    <!-- ===== HERO SECTION WITH VIDEO/IMAGE SLIDER ===== -->
+    <section class="hero-section sub-page-hero">
+        <div class="hero-slider">
+            <!-- Video Slide -->
+            <div class="slide active" data-type="video">
+                <video autoplay muted loop playsinline class="hero-video">
+                    <source src="Images/video1.mp4" type="video/mp4">
+                    <img src="Images/slide2.jpg" alt="Projects">
+                </video>
+                <div class="slide-overlay"></div>
+                <div class="slide-content">
+                    <h1 class="slide-title">Projects & Partners</h1>
+                    <p class="slide-description">Our track record of success and trusted partnerships</p>
+                    <nav class="breadcrumb hero-breadcrumb">
+                        <a href="index.html"><img src="icons/house-door.svg" class="icon-svg icon-inline" alt="home">
+                            Home</a>
+                        <span class="separator">/</span>
+                        <span class="current">Projects & Partners</span>
+                    </nav>
+                    <div class="slide-buttons">
+                        <a href="#" class="btn-whatsapp" data-whatsapp-number="971544300910">
+                            <img src="icons/whatsapp.svg" alt="WhatsApp"> Chat on WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- Image Slide -->
+            <div class="slide" data-type="image">
+                <img src="Images/team.jpeg" alt="Partnerships" class="hero-image">
+                <div class="slide-overlay"></div>
+                <div class="slide-content">
+                    <h1 class="slide-title">Trusted Partnerships</h1>
+                    <p class="slide-description">Building long-term relationships with industry leaders</p>
+                    <div class="slide-buttons">
+                        <a href="#" class="btn-whatsapp" data-whatsapp-number="971544300910">
+                            <img src="icons/whatsapp.svg" alt="WhatsApp"> Chat on WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slider Controls -->
+        <button class="slider-control prev" aria-label="Previous slide"><img src="icons/chevron-left.svg"
+                class="icon-svg" alt="prev"></button>
+        <button class="slider-control next" aria-label="Next slide"><img src="icons/chevron-right.svg" class="icon-svg"
+                alt="next"></button>
+        <div class="slider-indicators"></div>
+    </section>
+
+    <!-- ===== FEATURED PROJECTS ===== -->
+    <section class="section-padding" id="featured-projects">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">
+                    Featured
+                    Projects</h2>
+                <p class="section-subtitle">Showcasing our successful project deliveries across the UAE</p>
+            </div>
+
+            <div class="projects-filter">
+                <button class="filter-btn active" data-filter="all">All Projects</button>
+                <button class="filter-btn" data-filter="residential">Residential</button>
+                <button class="filter-btn" data-filter="commercial">Commercial</button>
+                <button class="filter-btn" data-filter="infrastructure">Infrastructure</button>
+                <button class="filter-btn" data-filter="hospitality">Hospitality</button>
+            </div>
+
+            <div class="projects-grid">
+                <!-- DAMAC IBIZA Project -->
+                <div class="project-card" data-category="residential" data-aos="fade-up">
+                    <div class="project-image">
+                        <img src="Images/projects/damac-ibiza.jpg" alt="DAMAC IBIZA Project">
+                        <div class="project-overlay">
+                            <a href="#" class="project-view" data-project="damac-ibiza"
+                                aria-label="View Project Details">
+                                <img src="icons/zoom-in.svg" class="icon-svg icon-inline" style="margin-right:0;"
+                                    alt="zoom">
+                            </a>
+                        </div>
+                        <div class="project-tag">Residential</div>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">DAMAC IBIZA Project</h3>
+                        <p class="project-location"><img src="icons/geo-alt.svg" class="icon-svg icon-inline"
+                                alt="location"> Dubai
+                            Marina, Dubai</p>
+                        <p class="project-description">High-rise luxury residential tower with comprehensive MEP and
+                            finishing works.</p>
+                        <div class="project-details">
+                            <div class="project-detail">
+                                <img src="icons/person.svg" class="icon-svg icon-inline" alt="workers">
+                                <span>120+ Workers</span>
+                            </div>
+                            <div class="project-detail">
+                                <img src="icons/calendar.svg" class="icon-svg icon-inline" alt="duration">
+                                <span>18 Months</span>
+                            </div>
+                        </div>
+                        <button class="btn btn-outline btn-sm view-details" data-project="damac-ibiza">
+                            View Details
+                        </button>
+                    </div>
+                </div>
+
+                <!-- AZIZA Dubai Industrial City -->
+                <div class="project-card" data-category="commercial" data-aos="fade-up" data-aos-delay="100">
+                    <div class="project-image">
+                        <img src="Images/projects/aziza-industrial.jpg" alt="AZIZA Dubai Industrial City">
+                        <div class="project-overlay">
+                            <a href="#" class="project-view" data-project="aziza-industrial"
+                                aria-label="View Project Details">
+                                <img src="icons/zoom-in.svg" class="icon-svg" alt="zoom">
+                            </a>
+                        </div>
+                        <div class="project-tag">Commercial</div>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">AZIZA Dubai Industrial City</h3>
+                        <p class="project-location"><img src="icons/geo-alt.svg" class="icon-svg" alt="location"> Dubai
+                            Industrial City, Dubai</p>
+                        <p class="project-description">Industrial complex development with steel structure and civil
+                            works support.</p>
+                        <div class="project-details">
+                            <div class="project-detail">
+                                <img src="icons/person.svg" class="icon-svg" alt="workers">
+                                <span>80+ Workers</span>
+                            </div>
+                            <div class="project-detail">
+                                <img src="icons/calendar.svg" class="icon-svg" alt="duration">
+                                <span>12 Months</span>
+                            </div>
+                        </div>
+                        <button class="btn btn-outline btn-sm view-details" data-project="aziza-industrial">
+                            View Details
+                        </button>
+                    </div>
+                </div>
+
+                <!-- EMAAR OASIS Project -->
+                <div class="project-card" data-category="residential" data-aos="fade-up" data-aos-delay="200">
+                    <div class="project-image">
+                        <img src="Images/projects/emaar-oasis.jpg" alt="EMAAR OASIS Project">
+                        <div class="project-overlay">
+                            <a href="#" class="project-view" data-project="emaar-oasis"
+                                aria-label="View Project Details">
+                                <img src="icons/zoom-in.svg" class="icon-svg" alt="zoom">
+                            </a>
+                        </div>
+                        <div class="project-tag">Residential</div>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">EMAAR OASIS Project</h3>
+                        <p class="project-location"><img src="icons/geo-alt.svg" class="icon-svg" alt="location"> The
+                            Oasis, Dubai</p>
+                        <p class="project-description">Villa community development with landscaping and finishing works
+                            support.</p>
+                        <div class="project-details">
+                            <div class="project-detail">
+                                <img src="icons/person.svg" class="icon-svg" alt="workers">
+                                <span>60+ Workers</span>
+                            </div>
+                            <div class="project-detail">
+                                <img src="icons/calendar.svg" class="icon-svg" alt="duration">
+                                <span>24 Months</span>
+                            </div>
+                        </div>
+                        <button class="btn btn-outline btn-sm view-details" data-project="emaar-oasis">
+                            View Details
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Dubai Metro Extension -->
+                <div class="project-card" data-category="infrastructure" data-aos="fade-up" data-aos-delay="300">
+                    <div class="project-image">
+                        <img src="Images/projects/dubai-metro.jpg" alt="Dubai Metro Extension">
+                        <div class="project-overlay">
+                            <a href="#" class="project-view" data-project="dubai-metro"
+                                aria-label="View Project Details">
+                                <img src="icons/zoom-in.svg" class="icon-svg" alt="zoom">
+                            </a>
+                        </div>
+                        <div class="project-tag">Infrastructure</div>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">Dubai Metro Extension</h3>
+                        <p class="project-location"><img src="icons/geo-alt.svg" class="icon-svg" alt="location"> Expo
+                            2020 Route, Dubai</p>
+                        <p class="project-description">Metro station construction support with civil and MEP workforce.
+                        </p>
+                        <div class="project-details">
+                            <div class="project-detail">
+                                <img src="icons/person.svg" class="icon-svg" alt="workers">
+                                <span>150+ Workers</span>
+                            </div>
+                            <div class="project-detail">
+                                <img src="icons/calendar.svg" class="icon-svg" alt="duration">
+                                <span>36 Months</span>
+                            </div>
+                        </div>
+                        <button class="btn btn-outline btn-sm view-details" data-project="dubai-metro">
+                            View Details
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Luxury Hotel Fit-Out -->
+                <div class="project-card" data-category="hospitality" data-aos="fade-up" data-aos-delay="400">
+                    <div class="project-image">
+                        <img src="Images/projects/luxury-hotel.jpg" alt="Luxury Hotel Fit-Out">
+                        <div class="project-overlay">
+                            <a href="#" class="project-view" data-project="luxury-hotel"
+                                aria-label="View Project Details">
+                                <img src="icons/zoom-in.svg" class="icon-svg" alt="zoom">
+                            </a>
+                        </div>
+                        <div class="project-tag">Hospitality</div>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">Luxury Hotel Fit-Out</h3>
+                        <p class="project-location"><img src="icons/geo-alt.svg" class="icon-svg" alt="location">
+                            Downtown Dubai</p>
+                        <p class="project-description">5-star hotel interior fit-out with specialized finishing teams.
+                        </p>
+                        <div class="project-details">
+                            <div class="project-detail">
+                                <img src="icons/person.svg" class="icon-svg" alt="workers">
+                                <span>90+ Workers</span>
+                            </div>
+                            <div class="project-detail">
+                                <img src="icons/calendar.svg" class="icon-svg" alt="duration">
+                                <span>14 Months</span>
+                            </div>
+                        </div>
+                        <button class="btn btn-outline btn-sm view-details" data-project="luxury-hotel">
+                            View Details
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Shopping Mall Maintenance -->
+                <div class="project-card" data-category="commercial" data-aos="fade-up" data-aos-delay="500">
+                    <div class="project-image">
+                        <img src="Images/projects/mall-maintenance.jpg" alt="Shopping Mall Maintenance">
+                        <div class="project-overlay icons-white">
+                            <a href="#" class="project-view" data-project="mall-maintenance"
+                                aria-label="View Project Details">
+                                <img src="icons/zoom-in.svg" class="icon-svg" alt="zoom">
+                            </a>
+                        </div>
+                        <div class="project-tag">Maintenance</div>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">Shopping Mall Maintenance</h3>
+                        <p class="project-location"><img src="icons/geo-alt.svg" class="icon-svg" alt="location"> Dubai
+                            Mall, Dubai</p>
+                        <p class="project-description">Ongoing maintenance and facility management support.</p>
+                        <div class="project-details">
+                            <div class="project-detail">
+                                <img src="icons/person.svg" class="icon-svg" alt="workers">
+                                <span>40+ Workers</span>
+                            </div>
+                            <div class="project-detail">
+                                <img src="icons/calendar.svg" class="icon-svg" alt="duration">
+                                <span>Ongoing</span>
+                            </div>
+                        </div>
+                        <button class="btn btn-outline btn-sm view-details" data-project="mall-maintenance">
+                            View Details
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== PROJECT STATISTICS ===== -->
+    <section class="section-padding bg-light" id="project-stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item" data-aos="zoom-in">
+                    <div class="feature-icon">
+                        <img src="icons/journal-check.svg" class="icon-svg" alt="journal">
+                    </div>
+                    <div class="stat-number" data-count="50">2+</div>
+                    <div class="stat-label">Projects Completed</div>
+                </div>
+
+                <div class="stat-item" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="feature-icon">
+                        <img src="icons/people-fill.svg" class="icon-svg" alt="people">
+                    </div>
+                    <div class="stat-number" data-count="1000">952+</div>
+                    <div class="stat-label">Workers Deployed</div>
+                </div>
+
+                <div class="stat-item" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="feature-icon">
+                        <img src="icons/clock-history.svg" class="icon-svg" alt="hours">
+                    </div>
+                    <div class="stat-number" data-count="5">4,530+</div>
+                    <div class="stat-label">Man-Hours Worked</div>
+                </div>
+
+                <div class="stat-item" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="icon-box is-circle box-light icon-top" style="margin: 0 auto 1.5rem;">
+                        <img src="icons/emoji-smile.svg" class="icon-svg" alt="smile">
+                    </div>
+                    <div class="stat-number" data-count="100">100%</div>
+                    <div class="stat-label">Client Satisfaction</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== INDUSTRY PARTNERS ===== -->
+    <section class="section-padding" id="partners">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">
+                    Our Trusted
+                    Partners</h2>
+                <p class="section-subtitle">Collaborating with leading contractors and developers in the UAE</p>
+            </div>
+
+            <div class="partners-grid">
+                <div class="partner-card" data-aos="zoom-in">
+                    <div class="partner-logo">
+                        <img src="icons/houses.svg" class="icon-svg" alt="houses">
+                        <h3>EMAAR Properties</h3>
+                    </div>
+                    <p class="partner-type">Developer</p>
+                    <p class="partner-projects">3+ Projects</p>
+                </div>
+
+                <div class="partner-card" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="partner-logo">
+                        <img src="icons/building-up.svg" class="icon-svg" alt="developer">
+                        <h3>DAMAC Properties</h3>
+                    </div>
+                    <p class="partner-type">Developer</p>
+                    <p class="partner-projects">4+ Projects</p>
+                </div>
+
+                <div class="partner-card" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="partner-logo">
+                        <img src="icons/tools.svg" class="icon-svg" alt="contractor">
+                        <h3>ALEC Engineering</h3>
+                    </div>
+                    <p class="partner-type">Main Contractor</p>
+                    <p class="partner-projects">6+ Projects</p>
+                </div>
+
+                <div class="partner-card" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="partner-logo">
+                        <img src="icons/tools.svg" class="icon-svg" alt="contractor">
+                        <h3>Arabian Construction</h3>
+                    </div>
+                    <p class="partner-type">Main Contractor</p>
+                    <p class="partner-projects">5+ Projects</p>
+                </div>
+
+                <div class="partner-card" data-aos="zoom-in" data-aos-delay="400">
+                    <div class="partner-logo">
+                        <img src="icons/water.svg" class="icon-svg" alt="developer">
+                        <h3>Nakheel Properties</h3>
+                    </div>
+                    <p class="partner-type">Developer</p>
+                    <p class="partner-projects">2+ Projects</p>
+                </div>
+
+                <div class="partner-card" data-aos="zoom-in" data-aos-delay="450">
+                    <div class="partner-logo">
+                        <img src="icons/building.svg" class="icon-svg" alt="developer">
+                        <h3>AZIZI Developments</h3>
+                    </div>
+                    <p class="partner-type">Developer</p>
+                    <p class="partner-projects">2 Projects</p>
+                </div>
+
+                <div class="partner-card" data-aos="zoom-in" data-aos-delay="500">
+                    <div class="partner-logo">
+                        <div class="feature-icon">
+                            <img src="icons/gear-wide-connected.svg" class="icon-svg" alt="contractor">
+                        </div>
+                        <h3>Brookfield Multiplex</h3>
+                    </div>
+                    <p class="partner-type">Main Contractor</p>
+                    <p class="partner-projects">3+ Projects</p>
+                </div>
+            </div>
+
+            <div class="section-header" data-aos="fade-up" style="margin-top: 60px;">
+                <h2 class="section-title"> What
+                    Our
+                    Partners Say</h2>
+                <p class="section-subtitle">Feedback from our esteemed clients</p>
+            </div>
+
+            <div class="partners-testimonials" data-aos="fade-up">
+                <div class="testimonial-slider">
+                    <div class="testimonial active">
+                        <div class="testimonial-content">
+                            <img src="icons/quote.svg" class="icon-svg" alt="quote">
+                            <p>"IMK Technical Services has been a reliable manpower partner for our projects. Their
+                                commitment to safety and quality is exceptional."</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <strong>Project Manager</strong>
+                            <span>Shaanxi</span>
+                        </div>
+                    </div>
+
+                    <div class="testimonial">
+                        <div class="testimonial-content">
+                            <img src="icons/quote.svg" class="icon-svg" alt="quote">
+                            <p>"Their ability to scale workforce based on project requirements and maintain compliance
+                                standards is commendable."</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <strong>Construction Director</strong>
+                            <span>ALEC Engineering</span>
+                        </div>
+                    </div>
+
+                    <div class="testimonial">
+                        <div class="testimonial-content">
+                            <img src="icons/quote.svg" class="icon-svg" alt="quote">
+                            <p>"IMK's integrated supervision model ensures smooth coordination and timely project
+                                delivery."</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <strong>Site Manager</strong>
+                            <span>Arabian Construction</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-controls">
+                    <button class="testimonial-prev" aria-label="Previous testimonial"><img src="icons/chevron-left.svg"
+                            class="icon-svg" alt="prev"></button>
+                    <div class="testimonial-dots"></div>
+                    <button class="testimonial-next" aria-label="Next testimonial"><img src="icons/chevron-right.svg"
+                            class="icon-svg" alt="next"></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== PROJECT INQUIRY ===== -->
+    <section class="section-padding bg-light" id="project-inquiry">
+        <div class="container">
+            <div class="inquiry-content" data-aos="fade-up">
+                <h2>Interested in Our Project Experience?</h2>
+                <p>Request detailed project portfolios, references, and manpower deployment records for your specific
+                    requirements.</p>
+                <a href="contact.html#request-form" class="btn btn-primary btn-lg">
+                    <img src="icons/folder.svg" class="icon-svg icon-inline" alt="portfolio"> Request Project Portfolio
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <!-- Company Info -->
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <img src="Images/IMK-BrandsLogo.png" alt="IMK Logo">
+                        <div class="footer-logo-text">
+                            <h3>IMK Technical Services</h3>
+                            <p>L.L.C</p>
+                        </div>
+                    </div>
+                    <div class="footer-about">
+                        <p>
+                            A UAE-licensed technical services and manpower supply company providing compliant,
+                            safety-trained, and supervised workforce to construction and infrastructure projects.
+                        </p>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://facebook.com" target="_blank" class="social-link" aria-label="Facebook"><img
+                                src="icons/facebook.svg" class="icon-svg" alt="facebook"></a>
+                        <a href="https://linkedin.com" target="_blank" class="social-link" aria-label="LinkedIn"><img
+                                src="icons/linkedin.svg" class="icon-svg" alt="linkedin"></a>
+                        <a href="https://twitter.com" target="_blank" class="social-link" aria-label="Twitter"><img
+                                src="icons/twitter.svg" class="icon-svg" alt="twitter"></a>
+                        <a href="https://instagram.com" target="_blank" class="social-link" aria-label="Instagram"><img
+                                src="icons/instagram.svg" class="icon-svg" alt="instagram"></a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Our Services</a></li>
+                        <li><a href="how-we-work.html">How We Work</a></li>
+                        <li><a href="projects-partners.html">Projects & Partners</a></li>
+                        <li><a href="jobs-career.html">Jobs & Career</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Services -->
+                <div class="footer-col">
+                    <h3>Our Services</h3>
+                    <ul class="footer-links">
+                        <li><a href="services.html#subcontracting">Subcontracting Services</a></li>
+                        <li><a href="services.html#one-time">One-Time Deployment</a></li>
+                        <li><a href="services.html#hr-payroll">HR & Payroll Management</a></li>
+                        <li><a href="services.html#skilled">Skilled Manpower Supply</a></li>
+                        <li><a href="services.html#technical">Technical Support Services</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="footer-col">
+                    <h3>Contact Us</h3>
+                    <div class="contact-info-item">
+                        <img src="icons/geo-alt.svg" class="icon-svg" alt="location">
+                        <p>Office No: 204, Mohammed Khaliq Alrehman Alansari Building, Naif Intersection, Dubai, UAE</p>
+                    </div>
+                    <div class="contact-info-item">
+                        <img src="icons/telephone.svg" class="icon-svg" alt="phone">
+                        <p>+971 544 300 910</p>
+                    </div>
+                    <div class="contact-info-item">
+                        <img src="icons/envelope.svg" class="icon-svg" alt="email">
+                        <p>info@imkservices.ae</p>
+                    </div>
+                    <div class="contact-info-item">
+                        <img src="icons/clock.svg" class="icon-svg" alt="hours">
+                        <p>Mon - Sat: 10:00 AM - 07:00 PM</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="footer-bottom-content">
+                    <p>&copy; 2026 IMK Technical Services LLC. All Rights Reserved.</p>
+                    <div class="footer-bottom-links">
+                        <a href="privacy.html">Privacy Policy</a>
+                        <a href="terms.html">Terms of Service</a>
+                        <a href="cookies.html">Cookie Policy</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ===== BACK TO TOP ===== -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <img src="icons/chevron-up.svg" class="icon-svg icon-inline" style="margin-right:0;" alt="top">
+    </button>
+
+    <!-- ===== PROJECT MODAL ===== -->
+    <div class="project-modal" id="projectModal">
+        <div class="modal-content">
+            <button class="modal-close" aria-label="Close modal"><img src="icons/x.svg" class="icon-svg"
+                    alt="close"></button>
+            <div class="modal-body" id="modalBody">
+                <!-- Project details will be loaded here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== SCRIPTS ===== -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/main.js?v=20260213d"></script>
+    <script src="js/whatsapp-widget.js?v=20260213a"></script>
+    <script src="js/projects.js"></script>
+
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100
+        });
+
+        // Initialize projects functionality
+        document.addEventListener('DOMContentLoaded', function () {
+            initProjectsFilter();
+            initTestimonialSlider();
+        });
+    </script>
+</body>
+
+</html>
+
+
