@@ -739,6 +739,7 @@
     gap: 2rem;
     padding-left: 0;
     --timeline-col: 64px;
+    --timeline-line: 32px;
 }
 
 .timeline-step {
@@ -752,7 +753,7 @@
 .timeline-step::before {
     content: '';
     position: absolute;
-    left: calc(var(--timeline-col) / 2);
+    left: var(--timeline-line);
     top: 0;
     bottom: -2rem;
     width: 2px;
@@ -1962,6 +1963,7 @@
 
     .process-timeline {
         --timeline-col: 52px;
+        --timeline-line: 26px;
     }
 
     .timeline-step {
@@ -2011,6 +2013,7 @@
 
     .process-timeline {
         --timeline-col: 44px;
+        --timeline-line: 22px;
     }
 
     .timeline-marker .icon-svg {
