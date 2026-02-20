@@ -739,7 +739,7 @@
     gap: 2rem;
     padding-left: 0;
     --timeline-col: 64px;
-    --timeline-line-offset: 4px;
+    --timeline-gap: 2rem;
 }
 
 .timeline-step {
@@ -748,20 +748,6 @@
     grid-template-columns: var(--timeline-col) minmax(0, 1fr);
     gap: 1.5rem;
     margin-bottom: 0;
-}
-
-.timeline-step::before {
-    content: '';
-    position: absolute;
-    left: calc(var(--timeline-col) / 2 + var(--timeline-line-offset));
-    top: 0;
-    bottom: -2rem;
-    width: 2px;
-    background: var(--primary-orange);
-}
-
-.timeline-step:last-child::before {
-    bottom: 0;
 }
 
 .timeline-marker {
@@ -774,6 +760,28 @@
     align-items: center;
     gap: 0.5rem;
     z-index: 2;
+    align-self: stretch;
+}
+
+.timeline-marker::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: calc(-1 * var(--timeline-gap));
+    width: 2px;
+    background: var(--primary-orange);
+    transform: translateX(-50%);
+    z-index: 0;
+}
+
+.timeline-step:last-child .timeline-marker::after {
+    bottom: 0;
+}
+
+.timeline-marker > * {
+    position: relative;
+    z-index: 1;
 }
 
 .timeline-marker .icon-svg {
@@ -1963,7 +1971,7 @@
 
     .process-timeline {
         --timeline-col: 52px;
-        --timeline-line-offset: 4px;
+        --timeline-gap: 2rem;
     }
 
     .timeline-step {
@@ -2013,7 +2021,7 @@
 
     .process-timeline {
         --timeline-col: 44px;
-        --timeline-line-offset: 4px;
+        --timeline-gap: 2rem;
     }
 
     .timeline-marker .icon-svg {
