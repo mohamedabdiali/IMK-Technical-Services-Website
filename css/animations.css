@@ -743,7 +743,7 @@
 .process-timeline::before {
     content: '';
     position: absolute;
-    left: 28px;
+    left: 32px;
     top: 0;
     bottom: 0;
     width: 2px;
@@ -1955,7 +1955,7 @@
     }
 
     .process-timeline::before {
-        left: 22px;
+        left: 26px;
     }
 
     .timeline-step {
@@ -2009,7 +2009,7 @@
     }
 
     .process-timeline::before {
-        left: 18px;
+        left: 22px;
     }
 
     .timeline-step {
