@@ -739,7 +739,7 @@
     gap: 2rem;
     padding-left: 0;
     --timeline-col: 64px;
-    --timeline-line: 32px;
+    --timeline-line-offset: 4px;
 }
 
 .timeline-step {
@@ -753,7 +753,7 @@
 .timeline-step::before {
     content: '';
     position: absolute;
-    left: var(--timeline-line);
+    left: calc(var(--timeline-col) / 2 + var(--timeline-line-offset));
     top: 0;
     bottom: -2rem;
     width: 2px;
@@ -1963,7 +1963,7 @@
 
     .process-timeline {
         --timeline-col: 52px;
-        --timeline-line: 26px;
+        --timeline-line-offset: 4px;
     }
 
     .timeline-step {
@@ -2013,7 +2013,7 @@
 
     .process-timeline {
         --timeline-col: 44px;
-        --timeline-line: 22px;
+        --timeline-line-offset: 4px;
     }
 
     .timeline-marker .icon-svg {
