@@ -589,6 +589,13 @@
     gap: 2rem;
 }
 
+@media (min-width: 1200px) {
+    .hse-process {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 1.5rem;
+    }
+}
+
 .hse-phase {
     background: var(--white);
     padding: 2rem;
