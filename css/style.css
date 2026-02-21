@@ -2549,6 +2549,10 @@ img {
     margin: 0 auto;
 }
 
+.job-detail-page {
+    padding-top: 140px;
+}
+
 .job-detail-actions {
     display: flex;
     align-items: center;
@@ -2622,6 +2626,10 @@ img {
 
     .job-detail-sections {
         grid-template-columns: 1fr;
+    }
+
+    .job-detail-page {
+        padding-top: 120px;
     }
 }
 
