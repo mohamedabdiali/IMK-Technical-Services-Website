@@ -1,117 +1,101 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // These will be called from the HTML if needed, 
-    // but the script also initializes itself.
+    if (!window.IMKJobs) {
+        return;
+    }
+
+    const jobs = IMKJobs.loadJobs();
+    renderJobs(jobs);
     initJobsFilter();
-    initJobApplication();
+    initJobApplication(jobs);
 });
 
-// Job Data (for detailed view)
-const jobDetails = {
-    'electrician': {
-        title: 'Electrician',
-        category: 'Skilled Manpower',
-        location: 'Dubai, UAE',
-        type: 'Full-time',
-        salary: 'AED 1,500 - 2,500',
-        description: 'We are seeking experienced Electricians to join our construction projects in Dubai. You will be responsible for installing and maintaining electrical systems.',
-        requirements: ['Minimum 2 years experience in construction sites', 'Knowledge of DEWA regulations is a plus', 'Ability to read electrical blueprints', 'Physically fit and able to work in outdoor conditions'],
-        responsibilities: ['Install electrical wiring, fixtures, and control systems', 'Troubleshoot electrical issues on site', 'Ensure all work meets safety standards', 'Collaborate with other MEP technicians']
-    },
-    'plumber': {
-        title: 'Plumber',
-        category: 'Skilled Manpower',
-        location: 'Abu Dhabi, UAE',
-        type: 'Full-time',
-        salary: 'AED 1,400 - 2,200',
-        description: 'Experienced Plumbers needed for installation of water systems and drainage in residential and commercial buildings.',
-        requirements: ['2+ years of plumbing experience', 'Familiarity with various piping materials (PPR, PVC, HDPE)', 'Ability to work independently'],
-        responsibilities: ['Install pipes, valves, and fittings', 'Connect water and drainage systems', 'Test systems for leaks and pressure', 'Maintain plumbing tools and equipment']
-    },
-    'ac-technician': {
-        title: 'AC Technician',
-        category: 'Skilled Manpower',
-        location: 'Dubai, UAE',
-        type: 'Full-time',
-        salary: 'AED 1,800 - 2,800',
-        description: 'AC Technicians required for installation and servicing of HVAC systems in skyscraper projects.',
-        requirements: ['3+ years experience in HVAC field', 'Knowledge of VRF and split unit systems', 'UAE experience preferred'],
-        responsibilities: ['Install indoor and outdoor AC units', 'Copper pipe insulation and brazing', 'Gas charging and leak detection', 'Routine maintenance and repair']
-    },
-    'hvac-technician': {
-        title: 'HVAC Technician',
-        category: 'Skilled Manpower',
-        location: 'Dubai, UAE',
-        type: 'Full-time',
-        salary: 'AED 2,500 - 3,000',
-        description: 'Installation, maintenance, and repair of HVAC systems in commercial buildings. Must have MEP background.',
-        requirements: ['4+ years experience in HVAC field', 'Knowledge of VRF and split unit systems', 'UAE experience preferred'],
-        responsibilities: ['Install indoor and outdoor HVAC units', 'Ducting, insulation, and commissioning', 'Troubleshoot system faults', 'Perform preventive maintenance']
-    },
-    'steel-fixer': {
-        title: 'Steel Fixer',
-        category: 'Skilled Manpower',
-        location: 'Multiple Locations, UAE',
-        type: 'Full-time',
-        salary: 'AED 1,200 - 2,000',
-        description: 'Steel Fixers needed for residential and commercial concrete foundation and structure work.',
-        requirements: ['Proven experience as a Steel Fixer', 'Ability to read structural drawings', 'Manual dexterity and physical strength'],
-        responsibilities: ['Read and interpret reinforcement drawings', 'Cut and bend steel bars according to specifications', 'Position and tie steel reinforcement with wire', 'Ensure correct concrete cover and spacing']
-    },
-    'mep-helper': {
-        title: 'MEP Helper',
-        category: 'Non-Skilled Manpower',
-        location: 'Sharjah, UAE',
-        type: 'Full-time',
-        salary: 'AED 1,200 - 1,800',
-        description: 'Assisting MEP technicians with installation and maintenance works on various job sites.',
-        requirements: ['Fresher or 1 year experience', 'Willingness to learn and work hard', 'Basic English communication'],
-        responsibilities: ['Organize and deliver tools/materials to technicians', 'Assist in cleaning and prepping work areas', 'Hold and support equipment during installation', 'Learn basic technical skills on the job']
-    },
-    'site-supervisor': {
-        title: 'Site Supervisor',
-        category: 'Supervisory',
-        location: 'Dubai, UAE',
-        type: 'Full-time',
-        salary: 'AED 3,500 - 5,000',
-        description: 'Supervising construction teams to ensure projects are completed safely, on time, and within budget.',
-        requirements: ['5+ years of site supervision experience in UAE', 'Diploma or Degree in Civil/Mechanical Engineering', 'Strong leadership and communication skills', 'Knowledge of safety regulations (HSE)'],
-        responsibilities: ['Daily planning and task allocation for workers', 'Monitor work quality and progress', 'Ensure compliance with safety standards', 'Report project status to project managers']
-    },
-    'general-labourer': {
-        title: 'General Labourer',
-        category: 'Non-Skilled Manpower',
-        location: 'All UAE',
-        type: 'Temporary',
-        salary: 'AED 1,200 - 1,500',
-        description: 'General construction support tasks across various work sites in the UAE.',
-        requirements: ['Physically fit for manual labour', 'Reliable and punctual', 'Ability to follow instructions'],
-        responsibilities: ['Load and unload construction materials', 'Maintain site cleanliness and organization', 'Shift materials manually or using basic equipment', 'Assist various trades as needed']
-    }
+const escapeHtml = (value) => {
+    return String(value || '')
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#39;');
 };
 
-// Add 15 new jobs placeholders
-const newJobsIds = ['carpenter', 'painter', 'mason', 'welder', 'driver', 'forklift-operator', 'civil-engineer', 'electrical-engineer', 'hr-coordinator', 'document-controller', 'safety-officer', 'procurement-assistant', 'storekeeper', 'scaffolder', 'rigging-supervisor'];
-newJobsIds.forEach(id => {
-    if (!jobDetails[id]) {
-        jobDetails[id] = {
-            title: id.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' '),
-            category: 'Category Not Specified',
-            location: 'Multiple Locations, UAE',
-            type: 'Full-time',
-            salary: 'AED 2,500 - 4,500',
-            description: 'Please contact our recruitment team for full details about this position.',
-            requirements: ['Experience in relevant field', 'UAE experience preferred', 'Valid certificates'],
-            responsibilities: ['Perform daily tasks according to project requirements', 'Maintain HSE standards', 'Report to site supervisor']
-        };
+const getCategoryLabel = (category) => IMKJobs.CATEGORY_LABELS[category] || category || '';
+const getLocationLabel = (location) => IMKJobs.LOCATION_LABELS[location] || location || '';
+const getTypeLabel = (type) => IMKJobs.TYPE_LABELS[type] || type || '';
+
+function renderJobs(jobs) {
+    const container = document.getElementById('jobsContainer');
+    if (!container) return;
+
+    const activeJobs = jobs.filter(job => job.status === 'active');
+
+    if (!activeJobs.length) {
+        container.innerHTML = `
+            <div class="jobs-empty">
+                <h3>No active openings</h3>
+                <p>Please check back soon for new opportunities.</p>
+            </div>
+        `;
+        return;
     }
-});
+
+    container.innerHTML = activeJobs.map((job, index) => buildJobCard(job, index)).join('');
+
+    if (window.AOS && typeof window.AOS.refresh === 'function') {
+        window.AOS.refresh();
+    }
+}
+
+function buildJobCard(job, index) {
+    const badgeHtml = job.badge ? `<div class="job-badge">${escapeHtml(job.badge)}</div>` : '';
+    const typeLabel = getTypeLabel(job.type);
+    const locationLabel = getLocationLabel(job.location);
+    const highlights = (job.highlights && job.highlights.length ? job.highlights : (job.requirements || [])).slice(0, 2);
+    const highlightIcons = ['person.svg', 'journal-check.svg'];
+
+    const highlightsHtml = highlights.map((item, idx) => `
+        <span class="requirement">
+            <img src="icons/${highlightIcons[idx] || highlightIcons[0]}" class="icon-svg icon-inline" alt="requirement">
+            ${escapeHtml(item)}
+        </span>
+    `).join('');
+
+    const delay = Math.min(index * 100, 300);
+
+    return `
+        <div class="job-card" data-category="${escapeHtml(job.category)}" data-location="${escapeHtml(job.location)}"
+            data-type="${escapeHtml(job.type)}" data-job-id="${escapeHtml(job.id)}"
+            data-aos="fade-up" data-aos-delay="${delay}">
+            <div class="job-header">
+                ${badgeHtml}
+                <div class="job-meta">
+                    <span class="job-type ${escapeHtml(job.type)}">${escapeHtml(typeLabel)}</span>
+                    <span class="job-location">
+                        <img src="icons/geo-alt.svg" class="icon-svg icon-inline" alt="location"> ${escapeHtml(locationLabel)}
+                    </span>
+                </div>
+            </div>
+            <div class="job-body">
+                <h3 class="job-title">${escapeHtml(job.title)}</h3>
+                <p class="job-description">${escapeHtml(job.description)}</p>
+                <div class="job-requirements">
+                    ${highlightsHtml}
+                </div>
+            </div>
+            <div class="job-footer">
+                <div class="job-salary">${escapeHtml(job.salary || 'Salary Negotiable')}</div>
+                <button class="btn btn-primary btn-sm apply-job" data-job="${escapeHtml(job.id)}">
+                    Apply Now
+                </button>
+            </div>
+        </div>
+    `;
+}
 
 function initJobsFilter() {
     const searchInput = document.getElementById('jobSearch');
     const locationFilter = document.getElementById('locationFilter');
     const typeFilter = document.getElementById('typeFilter');
     const categoryBtns = document.querySelectorAll('.category-btn');
-    const jobCards = document.querySelectorAll('.job-card');
 
     if (!searchInput || !locationFilter || !typeFilter) return;
 
@@ -121,13 +105,14 @@ function initJobsFilter() {
         const selectedType = typeFilter.value;
         const activeCategoryBtn = document.querySelector('.category-btn.active');
         const activeCategory = activeCategoryBtn ? activeCategoryBtn.dataset.category : 'all';
+        const jobCards = document.querySelectorAll('.job-card');
 
         jobCards.forEach(card => {
-            const title = card.querySelector('.job-title').textContent.toLowerCase();
-            const category = card.dataset.category;
-            const location = card.dataset.location;
-            const type = card.dataset.type;
-            const description = card.querySelector('.job-description')?.textContent.toLowerCase() || "";
+            const title = card.querySelector('.job-title')?.textContent.toLowerCase() || '';
+            const category = card.dataset.category || '';
+            const location = card.dataset.location || '';
+            const type = card.dataset.type || '';
+            const description = card.querySelector('.job-description')?.textContent.toLowerCase() || '';
 
             const matchesSearch = title.includes(searchTerm) || description.includes(searchTerm);
             const matchesCategory = activeCategory === 'all' || category === activeCategory;
@@ -155,7 +140,7 @@ function initJobsFilter() {
     });
 }
 
-function initJobApplication() {
+function initJobApplication(jobs) {
     const jobCards = document.querySelectorAll('.job-card');
     const applyPositionInput = document.getElementById('appliedPosition');
     const positionSelect = document.getElementById('position');
@@ -168,22 +153,30 @@ function initJobApplication() {
     const jobTypeInput = document.getElementById('jobType');
     const jobSalaryInput = document.getElementById('jobSalary');
 
-    if (!jobCards.length) return;
+    const activeJobs = Array.isArray(jobs) ? jobs.filter(job => job.status === 'active') : [];
+
+    if (positionSelect) {
+        const otherOption = positionSelect.querySelector('option[value="other"]');
+        positionSelect.innerHTML = '<option value="">Select Position</option>';
+        activeJobs.forEach(job => {
+            const option = document.createElement('option');
+            option.value = job.id;
+            option.textContent = job.title;
+            positionSelect.appendChild(option);
+        });
+        if (otherOption) {
+            positionSelect.appendChild(otherOption);
+        } else {
+            const option = document.createElement('option');
+            option.value = 'other';
+            option.textContent = 'Other';
+            positionSelect.appendChild(option);
+        }
+    }
 
     function openJobDetailsPage(jobId) {
         if (!jobId) return;
         window.location.href = `job-details.html?job=${encodeURIComponent(jobId)}`;
-    }
-
-    function ensureSelectOption(jobId, title) {
-        if (!positionSelect || !jobId) return;
-        const exists = Array.from(positionSelect.options).some((opt) => opt.value === jobId);
-        if (!exists) {
-            const option = document.createElement('option');
-            option.value = jobId;
-            option.textContent = title || jobId;
-            positionSelect.appendChild(option);
-        }
     }
 
     function populateSelectedJob(jobId) {
@@ -192,23 +185,28 @@ function initJobApplication() {
             return;
         }
 
-        const data = jobDetails[jobId] || { title: jobId, category: '', location: '', type: '', salary: '' };
+        const data = IMKJobs.getJobById(jobId, jobs) || { title: jobId };
         if (selectedJobInfo) selectedJobInfo.hidden = false;
         if (selectedJobTitle) selectedJobTitle.textContent = data.title || jobId;
 
         if (selectedJobMeta) {
+            const categoryLabel = getCategoryLabel(data.category);
+            const locationLabel = getLocationLabel(data.location);
+            const typeLabel = getTypeLabel(data.type);
+            const salaryLabel = data.salary || '';
+
             selectedJobMeta.innerHTML = `
-                ${data.category ? `<span><img src="icons/briefcase.svg" class="icon-svg icon-blue" alt="category"> ${data.category}</span>` : ''}
-                ${data.location ? `<span><img src="icons/geo-alt.svg" class="icon-svg icon-blue" alt="location"> ${data.location}</span>` : ''}
-                ${data.type ? `<span><img src="icons/clock.svg" class="icon-svg icon-blue" alt="type"> ${data.type}</span>` : ''}
-                ${data.salary ? `<span><img src="icons/currency-exchange.svg" class="icon-svg icon-blue" alt="salary"> ${data.salary}</span>` : ''}
+                ${categoryLabel ? `<span><img src="icons/briefcase.svg" class="icon-svg icon-blue" alt="category"> ${escapeHtml(categoryLabel)}</span>` : ''}
+                ${locationLabel ? `<span><img src="icons/geo-alt.svg" class="icon-svg icon-blue" alt="location"> ${escapeHtml(locationLabel)}</span>` : ''}
+                ${typeLabel ? `<span><img src="icons/clock.svg" class="icon-svg icon-blue" alt="type"> ${escapeHtml(typeLabel)}</span>` : ''}
+                ${salaryLabel ? `<span><img src="icons/currency-exchange.svg" class="icon-svg icon-blue" alt="salary"> ${escapeHtml(salaryLabel)}</span>` : ''}
             `;
         }
 
         if (jobTitleInput) jobTitleInput.value = data.title || jobId;
-        if (jobCategoryInput) jobCategoryInput.value = data.category || '';
-        if (jobLocationInput) jobLocationInput.value = data.location || '';
-        if (jobTypeInput) jobTypeInput.value = data.type || '';
+        if (jobCategoryInput) jobCategoryInput.value = getCategoryLabel(data.category);
+        if (jobLocationInput) jobLocationInput.value = getLocationLabel(data.location);
+        if (jobTypeInput) jobTypeInput.value = getTypeLabel(data.type);
         if (jobSalaryInput) jobSalaryInput.value = data.salary || '';
     }
 
@@ -220,7 +218,13 @@ function initJobApplication() {
                 applyPositionInput.value = positionTitle;
             }
             if (positionSelect && jobId) {
-                ensureSelectOption(jobId, positionTitle);
+                const exists = Array.from(positionSelect.options).some(opt => opt.value === jobId);
+                if (!exists) {
+                    const option = document.createElement('option');
+                    option.value = jobId;
+                    option.textContent = positionTitle || jobId;
+                    positionSelect.appendChild(option);
+                }
                 positionSelect.value = jobId;
             }
             populateSelectedJob(jobId);
@@ -228,18 +232,23 @@ function initJobApplication() {
     }
 
     jobCards.forEach(card => {
+        const jobId = card.dataset.jobId;
         const applyBtn = card.querySelector('.apply-job');
+
         if (applyBtn) {
-            applyBtn.addEventListener('click', (e) => {
-                e.stopPropagation();
-                const jobId = applyBtn.dataset.job;
-                const title = jobDetails[jobId]?.title || jobId;
-                scrollToApplication(title, jobId);
+            applyBtn.addEventListener('click', (event) => {
+                event.stopPropagation();
+                const selectedId = applyBtn.dataset.job || jobId;
+                const jobData = IMKJobs.getJobById(selectedId, jobs);
+                const title = jobData?.title || selectedId;
+                scrollToApplication(title, selectedId);
             });
         }
 
-        card.addEventListener('click', () => {
-            const jobId = applyBtn?.dataset.job;
+        card.addEventListener('click', (event) => {
+            if (event.target.closest('.apply-job')) {
+                return;
+            }
             openJobDetailsPage(jobId);
         });
     });
@@ -247,9 +256,16 @@ function initJobApplication() {
     const params = new URLSearchParams(window.location.search);
     const applyJob = params.get('apply');
     if (applyJob) {
-        const title = jobDetails[applyJob]?.title || applyJob;
+        const jobData = IMKJobs.getJobById(applyJob, jobs);
+        const title = jobData?.title || applyJob;
         if (positionSelect) {
-            ensureSelectOption(applyJob, title);
+            const exists = Array.from(positionSelect.options).some(opt => opt.value === applyJob);
+            if (!exists) {
+                const option = document.createElement('option');
+                option.value = applyJob;
+                option.textContent = title;
+                positionSelect.appendChild(option);
+            }
             positionSelect.value = applyJob;
         }
         if (applyPositionInput) {
@@ -262,7 +278,7 @@ function initJobApplication() {
     if (positionSelect) {
         positionSelect.addEventListener('change', () => {
             const selected = positionSelect.value;
-            if (selected) {
+            if (selected && selected !== 'other') {
                 populateSelectedJob(selected);
             } else if (selectedJobInfo) {
                 selectedJobInfo.hidden = true;

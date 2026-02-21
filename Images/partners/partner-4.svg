@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="320" height="120" viewBox="0 0 320 120">
+  <rect width="320" height="120" rx="16" fill="#f4f6fb"/>
+  <rect x="24" y="24" width="72" height="72" rx="14" fill="#0f2f57"/>
+  <rect x="40" y="40" width="40" height="40" rx="8" fill="#f36f21"/>
+  <text x="120" y="55" font-family="Montserrat, Arial, sans-serif" font-size="20" fill="#0f2f57" font-weight="700">Client Logo</text>
+  <text x="120" y="80" font-family="Open Sans, Arial, sans-serif" font-size="12" fill="#6c757d">Replace with real logo</text>
+</svg>
