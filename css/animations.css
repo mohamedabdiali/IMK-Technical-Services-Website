@@ -748,6 +748,7 @@
     display: grid;
     grid-template-columns: var(--timeline-col) minmax(0, 1fr);
     gap: 1.5rem;
+    align-items: center;
     margin-bottom: 0;
 }
 
@@ -761,7 +762,7 @@
     align-items: center;
     gap: 0.5rem;
     z-index: 2;
-    align-self: stretch;
+    align-self: center;
 }
 
 .timeline-marker::after {
