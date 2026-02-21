@@ -37,6 +37,16 @@ const jobDetails = {
         requirements: ['3+ years experience in HVAC field', 'Knowledge of VRF and split unit systems', 'UAE experience preferred'],
         responsibilities: ['Install indoor and outdoor AC units', 'Copper pipe insulation and brazing', 'Gas charging and leak detection', 'Routine maintenance and repair']
     },
+    'hvac-technician': {
+        title: 'HVAC Technician',
+        category: 'Skilled Manpower',
+        location: 'Dubai, UAE',
+        type: 'Full-time',
+        salary: 'AED 2,500 - 3,000',
+        description: 'Installation, maintenance, and repair of HVAC systems in commercial buildings. Must have MEP background.',
+        requirements: ['4+ years experience in HVAC field', 'Knowledge of VRF and split unit systems', 'UAE experience preferred'],
+        responsibilities: ['Install indoor and outdoor HVAC units', 'Ducting, insulation, and commissioning', 'Troubleshoot system faults', 'Perform preventive maintenance']
+    },
     'steel-fixer': {
         title: 'Steel Fixer',
         category: 'Skilled Manpower',
@@ -147,84 +157,56 @@ function initJobsFilter() {
 
 function initJobApplication() {
     const jobCards = document.querySelectorAll('.job-card');
-    const jobModal = document.getElementById('jobModal');
     const applyPositionInput = document.getElementById('appliedPosition');
+    const positionSelect = document.getElementById('position');
 
-    if (!jobModal) return;
+    if (!jobCards.length) return;
 
-    function openJobModal(jobId) {
-        const data = jobDetails[jobId] || { title: jobId, description: "Details coming soon...", requirements: [], responsibilities: [], category: "", location: "", type: "", salary: "" };
-        const modalContent = jobModal.querySelector('.job-modal-content');
-
-        modalContent.innerHTML = `
-            <span class="job-modal-close">&times;</span>
-            <div class="modal-job-header">
-                <h2 class="modal-job-title">${data.title}</h2>
-                <div class="modal-job-meta">
-                    ${data.category ? `<span><img src="icons/briefcase.svg" class="icon-svg icon-blue" alt="category"> ${data.category}</span>` : ''}
-                    ${data.location ? `<span><img src="icons/geo-alt.svg" class="icon-svg icon-blue" alt="location"> ${data.location}</span>` : ''}
-                    ${data.type ? `<span><img src="icons/clock.svg" class="icon-svg icon-blue" alt="type"> ${data.type}</span>` : ''}
-                    ${data.salary ? `<span><img src="icons/currency-exchange.svg" class="icon-svg icon-blue" alt="salary"> ${data.salary}</span>` : ''}
-                </div>
-            </div>
-            <div class="modal-job-body">
-                <h4>Job Description</h4>
-                <p>${data.description}</p>
-                
-                ${data.responsibilities.length ? `
-                <h4>Key Responsibilities</h4>
-                <ul>
-                    ${data.responsibilities.map(res => `<li>${res}</li>`).join('')}
-                </ul>` : ''}
-                
-                ${data.requirements.length ? `
-                <h4>Requirements</h4>
-                <ul>
-                    ${data.requirements.map(req => `<li>${req}</li>`).join('')}
-                </ul>` : ''}
-            </div>
-            <div class="modal-job-footer">
-                <button class="btn btn-secondary close-modal-btn">Close</button>
-                <button class="btn btn-primary modal-apply-btn" data-job="${jobId}">Apply Now</button>
-            </div>
-        `;
-
-        // Re-attach events
-        modalContent.querySelector('.job-modal-close').addEventListener('click', () => jobModal.classList.remove('active'));
-        modalContent.querySelector('.close-modal-btn').addEventListener('click', () => jobModal.classList.remove('active'));
-        modalContent.querySelector('.modal-apply-btn').addEventListener('click', (e) => {
-            const title = jobDetails[e.target.dataset.job]?.title || e.target.dataset.job;
-            jobModal.classList.remove('active');
-            scrollToApplication(title);
-        });
-
-        jobModal.classList.add('active');
+    function openJobDetailsPage(jobId) {
+        if (!jobId) return;
+        window.location.href = `job-details.html?job=${encodeURIComponent(jobId)}`;
     }
 
-    function scrollToApplication(positionTitle) {
+    function scrollToApplication(positionTitle, jobId) {
         const formSection = document.getElementById('application-form-section');
         if (formSection) {
             formSection.scrollIntoView({ behavior: 'smooth' });
             if (applyPositionInput) {
                 applyPositionInput.value = positionTitle;
             }
+            if (positionSelect && jobId) {
+                positionSelect.value = jobId;
+            }
         }
     }
 
     jobCards.forEach(card => {
-        card.addEventListener('click', (e) => {
-            if (e.target.classList.contains('apply-job')) {
-                const jobId = e.target.dataset.job;
-                scrollToApplication(jobDetails[jobId]?.title || jobId);
-                return;
-            }
+        const applyBtn = card.querySelector('.apply-job');
+        if (applyBtn) {
+            applyBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                const jobId = applyBtn.dataset.job;
+                const title = jobDetails[jobId]?.title || jobId;
+                scrollToApplication(title, jobId);
+            });
+        }
 
-            const btn = card.querySelector('.apply-job');
-            if (btn) openJobModal(btn.dataset.job);
+        card.addEventListener('click', () => {
+            const jobId = applyBtn?.dataset.job;
+            openJobDetailsPage(jobId);
         });
     });
 
-    window.addEventListener('click', (e) => {
-        if (e.target === jobModal) jobModal.classList.remove('active');
-    });
+    const params = new URLSearchParams(window.location.search);
+    const applyJob = params.get('apply');
+    if (applyJob) {
+        const title = jobDetails[applyJob]?.title || applyJob;
+        if (positionSelect) {
+            positionSelect.value = applyJob;
+        }
+        if (applyPositionInput) {
+            applyPositionInput.value = title;
+        }
+        scrollToApplication(title, applyJob);
+    }
 }
