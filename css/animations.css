@@ -740,6 +740,7 @@
     padding-left: 0;
     --timeline-col: 64px;
     --timeline-gap: 2rem;
+    --marker-shift: -6px;
 }
 
 .timeline-step {
@@ -782,6 +783,7 @@
 .timeline-marker > * {
     position: relative;
     z-index: 1;
+    transform: translateX(var(--marker-shift));
 }
 
 .timeline-marker .icon-svg {
@@ -1972,6 +1974,7 @@
     .process-timeline {
         --timeline-col: 52px;
         --timeline-gap: 2rem;
+        --marker-shift: -5px;
     }
 
     .timeline-step {
@@ -2022,6 +2025,7 @@
     .process-timeline {
         --timeline-col: 44px;
         --timeline-gap: 2rem;
+        --marker-shift: -4px;
     }
 
     .timeline-marker .icon-svg {
