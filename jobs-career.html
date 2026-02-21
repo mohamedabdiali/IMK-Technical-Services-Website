@@ -877,7 +877,20 @@
                     <p>Fill in your details to apply for a position</p>
                 </div>
 
+                <div class="selected-job-info" id="selectedJobInfo" hidden>
+                    <div class="selected-job-title">
+                        <span>Selected Position</span>
+                        <strong id="selectedJobTitle">Job Title</strong>
+                    </div>
+                    <div class="selected-job-meta" id="selectedJobMeta"></div>
+                </div>
+
                 <form id="jobApplicationForm" class="application-form">
+                    <input type="hidden" id="jobTitle" name="jobTitle">
+                    <input type="hidden" id="jobCategory" name="jobCategory">
+                    <input type="hidden" id="jobLocation" name="jobLocation">
+                    <input type="hidden" id="jobType" name="jobType">
+                    <input type="hidden" id="jobSalary" name="jobSalary">
                     <input type="hidden" id="appliedPosition" name="position">
 
                     <div class="form-group">

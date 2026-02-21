@@ -159,12 +159,57 @@ function initJobApplication() {
     const jobCards = document.querySelectorAll('.job-card');
     const applyPositionInput = document.getElementById('appliedPosition');
     const positionSelect = document.getElementById('position');
+    const selectedJobInfo = document.getElementById('selectedJobInfo');
+    const selectedJobTitle = document.getElementById('selectedJobTitle');
+    const selectedJobMeta = document.getElementById('selectedJobMeta');
+    const jobTitleInput = document.getElementById('jobTitle');
+    const jobCategoryInput = document.getElementById('jobCategory');
+    const jobLocationInput = document.getElementById('jobLocation');
+    const jobTypeInput = document.getElementById('jobType');
+    const jobSalaryInput = document.getElementById('jobSalary');
 
     if (!jobCards.length) return;
 
     function openJobDetailsPage(jobId) {
         if (!jobId) return;
         window.location.href = `job-details.html?job=${encodeURIComponent(jobId)}`;
+    }
+
+    function ensureSelectOption(jobId, title) {
+        if (!positionSelect || !jobId) return;
+        const exists = Array.from(positionSelect.options).some((opt) => opt.value === jobId);
+        if (!exists) {
+            const option = document.createElement('option');
+            option.value = jobId;
+            option.textContent = title || jobId;
+            positionSelect.appendChild(option);
+        }
+    }
+
+    function populateSelectedJob(jobId) {
+        if (!jobId) {
+            if (selectedJobInfo) selectedJobInfo.hidden = true;
+            return;
+        }
+
+        const data = jobDetails[jobId] || { title: jobId, category: '', location: '', type: '', salary: '' };
+        if (selectedJobInfo) selectedJobInfo.hidden = false;
+        if (selectedJobTitle) selectedJobTitle.textContent = data.title || jobId;
+
+        if (selectedJobMeta) {
+            selectedJobMeta.innerHTML = `
+                ${data.category ? `<span><img src="icons/briefcase.svg" class="icon-svg icon-blue" alt="category"> ${data.category}</span>` : ''}
+                ${data.location ? `<span><img src="icons/geo-alt.svg" class="icon-svg icon-blue" alt="location"> ${data.location}</span>` : ''}
+                ${data.type ? `<span><img src="icons/clock.svg" class="icon-svg icon-blue" alt="type"> ${data.type}</span>` : ''}
+                ${data.salary ? `<span><img src="icons/currency-exchange.svg" class="icon-svg icon-blue" alt="salary"> ${data.salary}</span>` : ''}
+            `;
+        }
+
+        if (jobTitleInput) jobTitleInput.value = data.title || jobId;
+        if (jobCategoryInput) jobCategoryInput.value = data.category || '';
+        if (jobLocationInput) jobLocationInput.value = data.location || '';
+        if (jobTypeInput) jobTypeInput.value = data.type || '';
+        if (jobSalaryInput) jobSalaryInput.value = data.salary || '';
     }
 
     function scrollToApplication(positionTitle, jobId) {
@@ -175,8 +220,10 @@ function initJobApplication() {
                 applyPositionInput.value = positionTitle;
             }
             if (positionSelect && jobId) {
+                ensureSelectOption(jobId, positionTitle);
                 positionSelect.value = jobId;
             }
+            populateSelectedJob(jobId);
         }
     }
 
@@ -202,11 +249,24 @@ function initJobApplication() {
     if (applyJob) {
         const title = jobDetails[applyJob]?.title || applyJob;
         if (positionSelect) {
+            ensureSelectOption(applyJob, title);
             positionSelect.value = applyJob;
         }
         if (applyPositionInput) {
             applyPositionInput.value = title;
         }
+        populateSelectedJob(applyJob);
         scrollToApplication(title, applyJob);
+    }
+
+    if (positionSelect) {
+        positionSelect.addEventListener('change', () => {
+            const selected = positionSelect.value;
+            if (selected) {
+                populateSelectedJob(selected);
+            } else if (selectedJobInfo) {
+                selectedJobInfo.hidden = true;
+            }
+        });
     }
 }

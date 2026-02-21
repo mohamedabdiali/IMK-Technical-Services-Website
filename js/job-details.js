@@ -36,6 +36,22 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const applyLink = `jobs-career.html?apply=${encodeURIComponent(jobId)}#application-form-section`;
 
+    const responsibilitiesHtml = data.responsibilities.length ? `
+        <div class="job-detail-section">
+            <h4>Key Responsibilities</h4>
+            <ul>
+                ${data.responsibilities.map(res => `<li>${res}</li>`).join('')}
+            </ul>
+        </div>` : '';
+
+    const requirementsHtml = data.requirements.length ? `
+        <div class="job-detail-section">
+            <h4>Requirements</h4>
+            <ul>
+                ${data.requirements.map(req => `<li>${req}</li>`).join('')}
+            </ul>
+        </div>` : '';
+
     container.innerHTML = `
         <div class="job-detail-actions">
             <a class="btn btn-outline" href="jobs-career.html#job-categories">Back to Jobs</a>
@@ -55,18 +71,11 @@ document.addEventListener('DOMContentLoaded', () => {
         <div class="modal-job-body">
             <h4>Job Description</h4>
             <p>${data.description}</p>
-
-            ${data.responsibilities.length ? `
-            <h4>Key Responsibilities</h4>
-            <ul>
-                ${data.responsibilities.map(res => `<li>${res}</li>`).join('')}
-            </ul>` : ''}
-
-            ${data.requirements.length ? `
-            <h4>Requirements</h4>
-            <ul>
-                ${data.requirements.map(req => `<li>${req}</li>`).join('')}
-            </ul>` : ''}
+            ${responsibilitiesHtml || requirementsHtml ? `
+            <div class="job-detail-sections">
+                ${responsibilitiesHtml}
+                ${requirementsHtml}
+            </div>` : ''}
         </div>
     `;
 });
