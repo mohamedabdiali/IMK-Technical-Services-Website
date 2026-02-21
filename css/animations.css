@@ -740,7 +740,7 @@
     padding-left: 0;
     --timeline-col: 64px;
     --timeline-gap: 2rem;
-    --timeline-line-offset: 6px;
+    --timeline-line-offset: 0px;
 }
 
 .timeline-step {
